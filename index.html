@@ -273,6 +273,80 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
   .plans .plan .badge { left: 20px; }
 }
 
+
+/* modules accordion */
+.acc-list-wrap { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; max-width: 920px; }
+.acc { background: var(--surface); border-radius: 18px; border: 1px solid rgba(255,255,255,.06); transition: background .3s, border-color .3s; }
+.acc.open { border-color: rgba(0,130,254,.45); background: #0C2649; }
+.acc-h { margin: 0; font: inherit; text-transform: none; }
+.acc-h button { width: 100%; display: grid; grid-template-columns: 64px minmax(0, 1fr) 36px; gap: 16px; align-items: center; text-align: left; background: none; border: 0; color: var(--ink); padding: 20px 22px; cursor: pointer; font: inherit; border-radius: 18px; }
+.acc-h button:hover .acc-title { color: var(--blue-hi); }
+.acc .n { font-family: var(--display); font-size: 50px; font-weight: 700; line-height: .85; color: transparent; -webkit-text-stroke: 1.5px var(--blue-hi); transition: color .3s; }
+.acc.open .n, .acc-h button:hover .n { color: var(--blue); }
+.acc-t { display: grid; gap: 4px; min-width: 0; }
+.acc .w { font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.acc-title { font-family: var(--display); font-size: 21.6px; font-weight: 600; text-transform: uppercase; line-height: 1.1; transition: color .2s; }
+.acc .res { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.acc .res::before { content: "→ "; color: var(--blue-hi); }
+.chev { width: 36px; height: 36px; border-radius: 50%; background: var(--blue-soft); position: relative; transition: background .3s, transform .35s cubic-bezier(.2,.8,.2,1); }
+.chev::before, .chev::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 2px; background: var(--blue-hi); border-radius: 2px; translate: -50% -50%; transition: transform .35s cubic-bezier(.2,.8,.2,1), background .3s; }
+.chev::after { transform: rotate(90deg); }
+.acc.open .chev { background: var(--blue); transform: rotate(180deg); }
+.acc.open .chev::before, .acc.open .chev::after { background: #fff; }
+.acc.open .chev::after { transform: rotate(0deg); }
+.acc-b { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .4s cubic-bezier(.2,.8,.2,1); }
+.acc.open .acc-b { grid-template-rows: 1fr; }
+.acc-in { overflow: hidden; min-height: 0; }
+.acc-in > div { margin: 0 22px 22px 102px; }
+.acc-label { margin: 0 0 10px; font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--blue-hi); font-weight: 700; }
+.acc-list { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 9px; }
+.acc-list li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; font-size: 14px; line-height: 1.45; }
+.acc-list li::before { content: ""; width: 18px; height: 18px; margin-top: 1px; border-radius: 50%; background: var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 10px no-repeat; }
+.acc-res { margin: 0; font-size: 14px; color: var(--muted); }
+.acc-res b { color: var(--ink); }
+.acc.open .acc-list li { animation: rise .4s cubic-bezier(.2,.8,.2,1) both; }
+.acc.open .acc-list li:nth-child(2) { animation-delay: .04s; } .acc.open .acc-list li:nth-child(3) { animation-delay: .08s; } .acc.open .acc-list li:nth-child(4) { animation-delay: .12s; } .acc.open .acc-list li:nth-child(5) { animation-delay: .16s; } .acc.open .acc-list li:nth-child(6) { animation-delay: .2s; }
+/* draft highlight: remove the class "show-drafts" from <body> to hide it */
+.draft-tag { display: none; }
+.show-drafts .draft { border: 1px dashed #F5C542; border-radius: 14px; padding: 14px 16px; background: rgba(245, 197, 66, .06); }
+.show-drafts .draft-tag { display: inline-block; margin-bottom: 10px; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #1A1606; background: #F5C542; padding: 4px 10px; border-radius: 999px; }
+@media (max-width: 600px) {
+  .acc-h button { grid-template-columns: 44px minmax(0, 1fr) 30px; gap: 12px; padding: 16px 14px; }
+  .acc .n { font-size: 36px; }
+  .acc-title { font-size: 18px; }
+  .chev { width: 30px; height: 30px; }
+  .acc-in > div { margin: 0 14px 16px; }
+}
+
+/* comparison of all packages */
+.cmp { margin-top: 56px; }
+.cmp-head { margin-bottom: 24px; }
+.cmp-title { font-size: clamp(30px, 4.2vw, 46px); font-weight: 700; }
+.cmp-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; align-items: stretch; }
+@media (max-width: 1080px) { .cmp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 26px; } }
+@media (max-width: 600px) { .cmp-grid { grid-template-columns: minmax(0, 1fr); } }
+.cmp-card { position: relative; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 26px 20px 20px; border-radius: 22px; background: var(--surface); border: 1px solid rgba(255,255,255,.08); transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s, box-shadow .35s; }
+.cmp-card:hover { transform: translateY(-6px); border-color: rgba(0,130,254,.5); box-shadow: 0 26px 50px -28px rgba(0,130,254,.6); }
+.cmp-card.feat { border: 2px solid var(--blue); background: linear-gradient(180deg, #0F3470 0%, var(--surface) 55%); box-shadow: 0 30px 70px -30px rgba(0,130,254,.7); }
+.cmp-card h3 { font-size: 32px; font-weight: 700; line-height: 1; }
+.cmp-card .price { padding: 12px 0; }
+.cmp-card .price .now { font-size: 43px; }
+.cmp-rows { list-style: none; margin: 0; padding: 0; display: grid; flex: 1; align-content: start; }
+.cmp-rows li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: start; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 13px; line-height: 1.4; }
+.cmp-rows li.off .c-label { color: rgba(157, 176, 204, .55); }
+.cmp-rows .yes { width: 20px; height: 20px; border-radius: 50%; background: var(--blue); color: #fff; display: grid; place-items: center; font-size: 11px; font-weight: 700; line-height: 1; }
+.cmp-rows .no { width: 20px; text-align: center; color: rgba(157, 176, 204, .5); font-weight: 700; }
+.cmp-rows .val { font-size: 12px; font-weight: 700; color: var(--blue-hi); white-space: nowrap; text-align: right; }
+.left { margin: 0; font-size: 13px; font-weight: 600; color: #FFB4A2; background: rgba(229, 72, 77, .1); border: 1px solid rgba(229, 72, 77, .35); border-radius: 12px; padding: 9px 12px; }
+.left b { color: #fff; }
+.cmp-btns { display: grid; gap: 8px; }
+.cmp-btns .btn { width: 100%; }
+.btn.link { border-color: transparent; background: transparent; color: var(--blue-hi); }
+.btn.link:hover { background: var(--blue-soft); border-color: transparent; }
+@media (max-width: 600px) {
+  .cmp-card .badge { left: 20px; translate: none; }
+}
+
 /* deposit ticket */
 .ticket { margin-top: 40px; display: grid; grid-template-columns: 220px minmax(0, 1fr); border-radius: 22px; overflow: hidden; position: relative; background: var(--blue); box-shadow: 0 24px 50px -28px rgba(0,130,254,.9); }
 .ticket-l { padding: 24px 28px; display: grid; gap: 2px; align-content: center; background: rgba(0,0,0,.14); }
@@ -444,7 +518,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
 </style>
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
-<body>
+<body class="show-drafts">
 
 <header class="top">
   <div class="wrap">
@@ -510,17 +584,176 @@ nav.menu a:hover::after { transform: scaleX(1); }
       <div class="head">
         <p class="eyebrow blue">8 модулей</p>
         <h2>Что будет <span class="b">на программе</span></h2>
-        <p class="lead">8 недель, 8 тем. Каждую неделю прорабатываем одну и забираем конкретный результат.</p>
+        <p class="lead">8 недель, 8 тем. Нажмите на неделю, чтобы увидеть, что в неё входит и какой будет результат.</p>
       </div>
-      <ol class="route">
-        <li><span class="n">01</span><div><span class="w">Неделя 1</span><h3>Знакомство с психикой и подсознанием</h3><p class="res">Доступ к заблокированной энергии</p></div></li>
-        <li><span class="n">02</span><div><span class="w">Неделя 2</span><h3>Разрушение старых программ</h3><p class="res">Прошлое перестаёт управлять настоящим</p></div></li>
-        <li><span class="n">03</span><div><span class="w">Неделя 3</span><h3>Сепарация и взросление</h3><p class="res">Рост дохода и внутренней свободы</p></div></li>
-        <li><span class="n">04</span><div><span class="w">Неделя 4</span><h3>Дефициты и самооценка</h3><p class="res">Деньги из достоинства, а не из нужды</p></div></li>
-        <li><span class="n">05</span><div><span class="w">Неделя 5</span><h3>Самоценность и проявленность</h3><p class="res">Свобода проявляться и действовать на результат</p></div></li>
-        <li><span class="n">06</span><div><span class="w">Неделя 6</span><h3>Убеждения и растяжка</h3><p class="res">Психика выдерживает новый масштаб</p></div></li>
-        <li><span class="n">07</span><div><span class="w">Неделя 7</span><h3>Выход из сценариев</h3><p class="res">Разрыв цикла, выход на новый уровень</p></div></li>
-        <li><span class="n">08</span><div><span class="w">Неделя 8</span><h3>Новая идентичность</h3><p class="res">Готовность действовать из новой себя</p></div></li>
+      <ol class="acc-list-wrap">
+        <li class="acc open">
+          <h3 class="acc-h"><button type="button" id="acc-btn-1" aria-expanded="true" aria-controls="acc-body-1">
+            <span class="n">01</span>
+            <span class="acc-t"><span class="w">Неделя 1</span><span class="acc-title">Знакомство с психикой и подсознанием</span><span class="res">Доступ к заблокированной энергии</span></span>
+            <span class="chev" aria-hidden="true"></span>
+          </button></h3>
+          <div class="acc-b" id="acc-body-1" role="region" aria-labelledby="acc-btn-1"><div class="acc-in">
+            <div class="draft"><span class="draft-tag">Черновик: сверить с Татьяной</span>
+              <p class="acc-label">Что входит</p>
+              <ul class="acc-list">
+                <li>Как устроена психика: сознание, подсознание и откуда берутся денежные реакции</li>
+                <li>Самосаботаж: как он проявляется в делах и деньгах</li>
+                <li>Конфликт «хочу» и «боюсь»: где он тормозит рост дохода</li>
+                <li>Скрытые выгоды бездействия: что нам «даёт» денежный потолок</li>
+                <li>Групповая терапия: первая проработка своего запроса</li>
+                <li>Задание: неделю отмечать моменты самосаботажа</li>
+              </ul>
+              <p class="acc-res"><b>Результат:</b> Вы видите, где и как тормозите себя сами. Энергия, которая уходила на внутренний конфликт, возвращается в дело.</p>
+            </div>
+          </div></div>
+        </li>
+        <li class="acc">
+          <h3 class="acc-h"><button type="button" id="acc-btn-2" aria-expanded="false" aria-controls="acc-body-2">
+            <span class="n">02</span>
+            <span class="acc-t"><span class="w">Неделя 2</span><span class="acc-title">Разрушение старых программ</span><span class="res">Прошлое перестаёт управлять настоящим</span></span>
+            <span class="chev" aria-hidden="true"></span>
+          </button></h3>
+          <div class="acc-b" id="acc-body-2" role="region" aria-labelledby="acc-btn-2"><div class="acc-in">
+            <div class="draft"><span class="draft-tag">Черновик: сверить с Татьяной</span>
+              <p class="acc-label">Что входит</p>
+              <ul class="acc-list">
+                <li>Травматические узлы: события, которые до сих пор влияют на решения о деньгах</li>
+                <li>Незавершённые процессы и как они забирают ресурс</li>
+                <li>Травмы развития и их след во взрослой жизни</li>
+                <li>Травмы бизнеса: провалы, потери, ошибки, которые страшно повторить</li>
+                <li>Групповая терапия: проработка одного узла</li>
+                <li>Задание: карта ключевых событий своей денежной истории</li>
+              </ul>
+              <p class="acc-res"><b>Результат:</b> Старые события теряют власть над вашими решениями. Вы действуете из настоящего, а не из прошлого опыта.</p>
+            </div>
+          </div></div>
+        </li>
+        <li class="acc">
+          <h3 class="acc-h"><button type="button" id="acc-btn-3" aria-expanded="false" aria-controls="acc-body-3">
+            <span class="n">03</span>
+            <span class="acc-t"><span class="w">Неделя 3</span><span class="acc-title">Сепарация и взросление</span><span class="res">Рост дохода и внутренней свободы</span></span>
+            <span class="chev" aria-hidden="true"></span>
+          </button></h3>
+          <div class="acc-b" id="acc-body-3" role="region" aria-labelledby="acc-btn-3"><div class="acc-in">
+            <div class="draft"><span class="draft-tag">Черновик: сверить с Татьяной</span>
+              <p class="acc-label">Что входит</p>
+              <ul class="acc-list">
+                <li>Эмоциональная связь с родителями и её влияние на доход</li>
+                <li>Обиды и ожидания: что мешает взять ответственность за свои деньги</li>
+                <li>Семейные сценарии и лояльность роду</li>
+                <li>Взрослая позиция: решения из себя, а не из долга или протеста</li>
+                <li>Групповая терапия по теме сепарации</li>
+                <li>Задание: письмо родителям без отправки</li>
+              </ul>
+              <p class="acc-res"><b>Результат:</b> Вы занимаете взрослую позицию в деньгах. Растут доход и ощущение внутренней свободы.</p>
+            </div>
+          </div></div>
+        </li>
+        <li class="acc">
+          <h3 class="acc-h"><button type="button" id="acc-btn-4" aria-expanded="false" aria-controls="acc-body-4">
+            <span class="n">04</span>
+            <span class="acc-t"><span class="w">Неделя 4</span><span class="acc-title">Дефициты и самооценка</span><span class="res">Деньги из достоинства, а не из нужды</span></span>
+            <span class="chev" aria-hidden="true"></span>
+          </button></h3>
+          <div class="acc-b" id="acc-body-4" role="region" aria-labelledby="acc-btn-4"><div class="acc-in">
+            <div class="draft"><span class="draft-tag">Черновик: сверить с Татьяной</span>
+              <p class="acc-label">Что входит</p>
+              <ul class="acc-list">
+                <li>Чувство недостаточности: «мне всегда мало»</li>
+                <li>Антиденежная самооценка и как она влияет на вашу цену</li>
+                <li>Откуда берутся дефициты и чем мы их закрываем</li>
+                <li>Внутренние опоры: на что опираться вместо внешнего одобрения</li>
+                <li>Групповая терапия</li>
+                <li>Задание: список своих опор и реальных результатов</li>
+              </ul>
+              <p class="acc-res"><b>Результат:</b> Вы зарабатываете из достоинства, а не из нужды, и спокойнее называете свою цену.</p>
+            </div>
+          </div></div>
+        </li>
+        <li class="acc">
+          <h3 class="acc-h"><button type="button" id="acc-btn-5" aria-expanded="false" aria-controls="acc-body-5">
+            <span class="n">05</span>
+            <span class="acc-t"><span class="w">Неделя 5</span><span class="acc-title">Самоценность и проявленность</span><span class="res">Свобода проявляться и действовать на результат</span></span>
+            <span class="chev" aria-hidden="true"></span>
+          </button></h3>
+          <div class="acc-b" id="acc-body-5" role="region" aria-labelledby="acc-btn-5"><div class="acc-in">
+            <div class="draft"><span class="draft-tag">Черновик: сверить с Татьяной</span>
+              <p class="acc-label">Что входит</p>
+              <ul class="acc-list">
+                <li>Страх быть видимым и его корни</li>
+                <li>Стыд и «что подумают люди»</li>
+                <li>Право занимать своё место и называть цену</li>
+                <li>Проявленность в продажах и соцсетях</li>
+                <li>Групповая терапия</li>
+                <li>Задание: одно действие на видимость, которое давно откладывали</li>
+              </ul>
+              <p class="acc-res"><b>Результат:</b> Вы проявляетесь без внутреннего торможения и действуете на результат.</p>
+            </div>
+          </div></div>
+        </li>
+        <li class="acc">
+          <h3 class="acc-h"><button type="button" id="acc-btn-6" aria-expanded="false" aria-controls="acc-body-6">
+            <span class="n">06</span>
+            <span class="acc-t"><span class="w">Неделя 6</span><span class="acc-title">Убеждения и растяжка</span><span class="res">Психика выдерживает новый масштаб</span></span>
+            <span class="chev" aria-hidden="true"></span>
+          </button></h3>
+          <div class="acc-b" id="acc-body-6" role="region" aria-labelledby="acc-btn-6"><div class="acc-in">
+            <div class="draft"><span class="draft-tag">Черновик: сверить с Татьяной</span>
+              <p class="acc-label">Что входит</p>
+              <ul class="acc-list">
+                <li>Денежные убеждения: найти и переписать</li>
+                <li>Страх больших денег: что изменится, если доход вырастет</li>
+                <li>Финансовая растяжка: как психика привыкает к новым суммам</li>
+                <li>Финансовая ёмкость: сколько денег вы готовы удерживать</li>
+                <li>Групповая терапия</li>
+                <li>Задание: практика растяжки на новую сумму</li>
+              </ul>
+              <p class="acc-res"><b>Результат:</b> Психика выдерживает новый масштаб, большие суммы перестают пугать.</p>
+            </div>
+          </div></div>
+        </li>
+        <li class="acc">
+          <h3 class="acc-h"><button type="button" id="acc-btn-7" aria-expanded="false" aria-controls="acc-body-7">
+            <span class="n">07</span>
+            <span class="acc-t"><span class="w">Неделя 7</span><span class="acc-title">Выход из сценариев</span><span class="res">Разрыв цикла, выход на новый уровень</span></span>
+            <span class="chev" aria-hidden="true"></span>
+          </button></h3>
+          <div class="acc-b" id="acc-body-7" role="region" aria-labelledby="acc-btn-7"><div class="acc-in">
+            <div class="draft"><span class="draft-tag">Черновик: сверить с Татьяной</span>
+              <p class="acc-label">Что входит</p>
+              <ul class="acc-list">
+                <li>Сценарии бедности и потолка: как их распознать</li>
+                <li>Повторяющиеся циклы: деньги приходят и обнуляются</li>
+                <li>Где именно в вашей жизни повторяется сценарий</li>
+                <li>Точка выбора: как поступить иначе</li>
+                <li>Групповая терапия</li>
+                <li>Задание: разбор своего цикла и один новый шаг</li>
+              </ul>
+              <p class="acc-res"><b>Результат:</b> Вы разрываете повторяющийся цикл и выходите на новый уровень дохода.</p>
+            </div>
+          </div></div>
+        </li>
+        <li class="acc">
+          <h3 class="acc-h"><button type="button" id="acc-btn-8" aria-expanded="false" aria-controls="acc-body-8">
+            <span class="n">08</span>
+            <span class="acc-t"><span class="w">Неделя 8</span><span class="acc-title">Новая идентичность</span><span class="res">Готовность действовать из новой себя</span></span>
+            <span class="chev" aria-hidden="true"></span>
+          </button></h3>
+          <div class="acc-b" id="acc-body-8" role="region" aria-labelledby="acc-btn-8"><div class="acc-in">
+            <div class="draft"><span class="draft-tag">Черновик: сверить с Татьяной</span>
+              <p class="acc-label">Что входит</p>
+              <ul class="acc-list">
+                <li>Новая версия себя: кто вы на новом уровне дохода</li>
+                <li>ABC-шаги стратегии: от решения к действиям</li>
+                <li>Как закрепить изменения после программы</li>
+                <li>Итоговая групповая терапия</li>
+                <li>Задание: план действий на 3 месяца</li>
+              </ul>
+              <p class="acc-res"><b>Результат:</b> Вы готовы действовать из новой себя и знаете свои следующие шаги.</p>
+            </div>
+          </div></div>
+        </li>
       </ol>
     </div>
   </section>
@@ -646,6 +879,139 @@ nav.menu a:hover::after { transform: scaleX(1); }
         </article>
       </div>
 
+      <div class="cmp" id="compare">
+        <div class="cmp-head">
+          <p class="eyebrow blue">Сравнение</p>
+          <h3 class="cmp-title">Все пакеты <span class="b">рядом</span></h3>
+        </div>
+        <div class="cmp-grid">
+        <article class="cmp-card">
+          
+          <h3>Записи</h3>
+          <div class="price">
+            <div class="price-row"><span class="now" data-early="€490" data-full="€690">€490</span><span class="save" data-early="−€200" data-full="">−€200</span></div>
+            <span class="old" data-early="&lt;s&gt;€690&lt;/s&gt;" data-full="&amp;nbsp;"><s>€690</s></span>
+            <span class="inst">или <b>€82</b>/мес · рассрочка 6 мес</span>
+          </div>
+          <ul class="cmp-rows">
+            <li class="on"><span class="c-label">Шесть занятий в записи, доступ через сутки после эфира</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Базовые упражнения и психотехники</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Общий чат потока</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="off"><span class="c-label">Живое участие во всех шести занятиях с вопросами</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">Куратор</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">Приложение «Проработчик денег»</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">Работа с травмами развития</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">Разбор своего случая в группе</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">3 месяца в группе «Метафизика бизнеса»</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">VIP-чат с ответами Татьяны</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">4 глубинные сессии индивидуально</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">Личный маршрут проработки</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">Прямая связь с Татьяной между сессиями</span><span class="no" aria-label="нет">—</span></li>
+            <li class="on"><span class="c-label">Доступ к материалам</span><span class="val">3 месяца</span></li>
+          </ul>
+          <p class="left" data-total="30"><span aria-hidden="true">🔥</span> Осталось <b class="left-n">30</b> из 30 мест</p>
+          <div class="cmp-btns">
+            <a class="btn ghost" href="#prices" data-book>Забронировать</a>
+            <a class="btn link" href="#faq" data-ask>Задать вопрос</a>
+          </div>
+        </article>
+        <article class="cmp-card">
+          
+          <h3>Поток</h3>
+          <div class="price">
+            <div class="price-row"><span class="now" data-early="€790" data-full="€1 090">€790</span><span class="save" data-early="−€300" data-full="">−€300</span></div>
+            <span class="old" data-early="&lt;s&gt;€1 090&lt;/s&gt;" data-full="&amp;nbsp;"><s>€1 090</s></span>
+            <span class="inst">или <b>€132</b>/мес · рассрочка 6 мес</span>
+          </div>
+          <ul class="cmp-rows">
+            <li class="on"><span class="c-label">Шесть занятий в записи, доступ через сутки после эфира</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Базовые упражнения и психотехники</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Общий чат потока</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Живое участие во всех шести занятиях с вопросами</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Куратор</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Приложение «Проработчик денег»</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="off"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">Работа с травмами развития</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">Разбор своего случая в группе</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">3 месяца в группе «Метафизика бизнеса»</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">VIP-чат с ответами Татьяны</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">4 глубинные сессии индивидуально</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">Личный маршрут проработки</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">Прямая связь с Татьяной между сессиями</span><span class="no" aria-label="нет">—</span></li>
+            <li class="on"><span class="c-label">Доступ к материалам</span><span class="val">6 месяцев</span></li>
+          </ul>
+          <p class="left" data-total="20"><span aria-hidden="true">🔥</span> Осталось <b class="left-n">20</b> из 20 мест</p>
+          <div class="cmp-btns">
+            <a class="btn ghost" href="#prices" data-book>Забронировать</a>
+            <a class="btn link" href="#faq" data-ask>Задать вопрос</a>
+          </div>
+        </article>
+        <article class="cmp-card feat">
+          <span class="badge">🔥 Самый популярный</span>
+          <h3>Глубина</h3>
+          <div class="price">
+            <div class="price-row"><span class="now" data-early="€990" data-full="€1 400">€990</span><span class="save" data-early="−€410" data-full="">−€410</span></div>
+            <span class="old" data-early="&lt;s&gt;€1 400&lt;/s&gt;" data-full="&amp;nbsp;"><s>€1 400</s></span>
+            <span class="inst">или <b>€165</b>/мес · рассрочка 6 мес</span>
+          </div>
+          <ul class="cmp-rows">
+            <li class="on"><span class="c-label">Шесть занятий в записи, доступ через сутки после эфира</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Базовые упражнения и психотехники</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Общий чат потока</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Живое участие во всех шести занятиях с вопросами</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Куратор</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Приложение «Проработчик денег»</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Работа с травмами развития</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Разбор своего случая в группе</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">3 месяца в группе «Метафизика бизнеса»</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">VIP-чат с ответами Татьяны</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="off"><span class="c-label">4 глубинные сессии индивидуально</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">Личный маршрут проработки</span><span class="no" aria-label="нет">—</span></li>
+            <li class="off"><span class="c-label">Прямая связь с Татьяной между сессиями</span><span class="no" aria-label="нет">—</span></li>
+            <li class="on"><span class="c-label">Доступ к материалам</span><span class="val">навсегда</span></li>
+          </ul>
+          <p class="left" data-total="10"><span aria-hidden="true">🔥</span> Осталось <b class="left-n">10</b> из 10 мест</p>
+          <div class="cmp-btns">
+            <a class="btn solid" href="#prices" data-book>Забронировать</a>
+            <a class="btn link" href="#faq" data-ask>Задать вопрос</a>
+          </div>
+        </article>
+        <article class="cmp-card">
+          
+          <h3>VIP</h3>
+          <div class="price">
+            <div class="price-row"><span class="now" data-early="€1 990" data-full="€1 990">€1 990</span></div>
+            <span class="old" data-early="без ранней цены" data-full="&amp;nbsp;">без ранней цены</span>
+            <span class="inst">или <b>€332</b>/мес · рассрочка 6 мес</span>
+          </div>
+          <ul class="cmp-rows">
+            <li class="on"><span class="c-label">Шесть занятий в записи, доступ через сутки после эфира</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Базовые упражнения и психотехники</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Общий чат потока</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Живое участие во всех шести занятиях с вопросами</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Куратор</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Приложение «Проработчик денег»</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Работа с травмами развития</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Разбор своего случая в группе</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">3 месяца в группе «Метафизика бизнеса»</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">VIP-чат с ответами Татьяны</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">4 глубинные сессии индивидуально</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Личный маршрут проработки</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Прямая связь с Татьяной между сессиями</span><span class="yes" aria-label="есть">✔</span></li>
+            <li class="on"><span class="c-label">Доступ к материалам</span><span class="val">навсегда</span></li>
+          </ul>
+          <p class="left" data-total="3"><span aria-hidden="true">🔥</span> Осталось <b class="left-n">3</b> из 3 мест</p>
+          <div class="cmp-btns">
+            <a class="btn ghost" href="#prices" data-book>Забронировать</a>
+            <a class="btn link" href="#faq" data-ask>Задать вопрос</a>
+          </div>
+        </article>
+        </div>
+      </div>
+
       <div class="ticket">
         <div class="ticket-l"><small>Бронь места</small><strong>€50</strong></div>
         <div class="ticket-r">
@@ -691,6 +1057,22 @@ nav.menu a:hover::after { transform: scaleX(1); }
     var t = document.querySelector('.toggle'); if (t) t.dataset.mode = mode;
   }
 
+
+  // links: put the real booking / contact links here, they are applied to every matching button
+  var LINKS = { book: '', ask: '' };
+  if (LINKS.book) document.querySelectorAll('[data-book]').forEach(function (a) { a.href = LINKS.book; a.target = '_blank'; a.rel = 'noopener'; });
+  if (LINKS.ask) document.querySelectorAll('[data-ask]').forEach(function (a) { a.href = LINKS.ask; a.target = '_blank'; a.rel = 'noopener'; });
+  // seats left per package, in order Записи, Поток, Глубина, VIP
+  var SEATS_LEFT = [30, 20, 10, 3];
+  document.querySelectorAll('.cmp-card .left-n').forEach(function (el, i) { if (SEATS_LEFT[i] != null) el.textContent = SEATS_LEFT[i]; });
+
+  // modules accordion
+  document.querySelectorAll('.acc-h button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var li = btn.closest('.acc'), open = !li.classList.contains('open');
+      li.classList.toggle('open', open); btn.setAttribute('aria-expanded', String(open));
+    });
+  });
   // tariff tabs
   (function () {
     var plans = [].slice.call(document.querySelectorAll('.plans .plan')), tabs = document.getElementById('tabs');
@@ -749,7 +1131,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
   if (reduce || !('IntersectionObserver' in window)) return;
-  var sel = '.head, .pains li, .thesis, .dl div, .format div, .route li, .checks li, .extra, .tabs, .ticket, .about-img, .about-text > *, .goal blockquote, .goal p, .days li, .bonus, .faq details, .link';
+  var sel = '.head, .pains li, .thesis, .dl div, .format div, .acc, .checks li, .extra, .tabs, .cmp-card, .ticket, .about-img, .about-text > *, .goal blockquote, .goal p, .days li, .bonus, .faq details, .link';
   var items = [].slice.call(document.querySelectorAll(sel)).filter(function (el) { return el.getBoundingClientRect().top > window.innerHeight; });
   items.forEach(function (el) {
     var sib = el.parentElement ? [].indexOf.call(el.parentElement.children, el) : 0;
