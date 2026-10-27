@@ -162,7 +162,7 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
 .toggle[data-mode="full"] .toggle-pill { transform: translateX(100%); }
 .toggle button { position: relative; z-index: 1; background: none; border: 0; color: var(--muted); font: 600 11.7px var(--body); letter-spacing: .04em; padding: 11px 20px; border-radius: 999px; cursor: pointer; transition: color .25s; white-space: nowrap; }
 .toggle button[aria-pressed="true"] { color: #fff; }
-.toggle-note { margin: 0; font-size: 11.7px; color: var(--muted); text-align: right; }
+.toggle-note { margin: 0; font-size: 12.6px; font-weight: 600; color: var(--ink); text-align: right; background: var(--blue-soft); border: 1px solid rgba(0,130,254,.45); border-radius: 999px; padding: 9px 16px; }
 @media (max-width: 700px) { .toggle-wrap { justify-items: start; } .toggle-note { text-align: left; } }
 
 .plans { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
@@ -849,11 +849,6 @@ nav.menu a:hover::after { transform: scaleX(1); }
           <p class="lead">Четыре уровня погружения. Нажмите на тариф, чтобы увидеть, что в него входит.</p>
         </div>
         <div class="toggle-wrap">
-          <div class="toggle" role="group" aria-label="Цена" data-mode="early">
-            <span class="toggle-pill" aria-hidden="true"></span>
-            <button type="button" id="p-early" data-mode="early" aria-pressed="true">Ранняя цена</button>
-            <button type="button" id="p-full" data-mode="full" aria-pressed="false">Обычная цена</button>
-          </div>
           <p class="toggle-note">Ранняя цена при брони в дни практикума: выгода до €410</p>
         </div>
       </div>
@@ -1204,7 +1199,6 @@ nav.menu a:hover::after { transform: scaleX(1); }
   document.querySelectorAll('.toggle button').forEach(function (b) {
     b.addEventListener('click', function () { apply(b.dataset.mode); try { localStorage.setItem(KEY, b.dataset.mode); } catch (e) {} });
   });
-  try { var m = localStorage.getItem(KEY); if (m === 'full' || m === 'early') apply(m); } catch (e) {}
 })();
 
 (function () {
