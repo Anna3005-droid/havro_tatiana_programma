@@ -199,6 +199,7 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
 .price .old { font-size: 12.6px; color: var(--muted); min-height: 1.4em; }
 .price .inst { font-size: 11.7px; color: var(--muted); }
 .price .inst b { color: var(--ink); }
+.price .inst > span { display: block; }
 .plan ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: 13.1px; line-height: 1.45; flex: 1; align-content: start; }
 .plan li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; }
 .plan li::before { content: "+"; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font-size: 12.6px; font-weight: 700; line-height: 1; color: var(--blue-hi); background: var(--blue-soft); margin-top: 1px; }
@@ -876,7 +877,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
           <div class="price">
             <div class="price-row"><span class="now" data-early="€490" data-full="€690">€490</span><span class="save" data-early="−€200" data-full="">−€200</span></div>
             <span class="old" data-early="&lt;s&gt;€690&lt;/s&gt;" data-full="&amp;nbsp;"><s>€690</s></span>
-            <span class="inst">или <b>€82</b>/мес · рассрочка 6 мес</span>
+            <span class="inst"><span>Рассрочка на 6 мес: <b>€82</b>/мес</span><span>Рассрочка на 12 мес: <b>≈€41</b>/мес</span></span>
           </div>
           <ul>
             <li><span>8 групповых трансформационных встреч с Татьяной: <b class="li-val">в записи</b></span></li>
@@ -895,7 +896,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
           <div class="price">
             <div class="price-row"><span class="now" data-early="€790" data-full="€1 090">€790</span><span class="save" data-early="−€300" data-full="">−€300</span></div>
             <span class="old" data-early="&lt;s&gt;€1 090&lt;/s&gt;" data-full="&amp;nbsp;"><s>€1 090</s></span>
-            <span class="inst">или <b>€132</b>/мес · рассрочка 6 мес</span>
+            <span class="inst"><span>Рассрочка на 6 мес: <b>€132</b>/мес</span><span>Рассрочка на 12 мес: <b>≈€66</b>/мес</span></span>
           </div>
           <ul>
             <li><span>8 групповых трансформационных встреч с Татьяной: <b class="li-val">в записи</b></span></li>
@@ -918,7 +919,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
           <div class="price">
             <div class="price-row"><span class="now" data-early="€990" data-full="€1 400">€990</span><span class="save" data-early="−€410" data-full="">−€410</span></div>
             <span class="old" data-early="&lt;s&gt;€1 400&lt;/s&gt;" data-full="&amp;nbsp;"><s>€1 400</s></span>
-            <span class="inst">или <b>€165</b>/мес · рассрочка 6 мес</span>
+            <span class="inst"><span>Рассрочка на 6 мес: <b>€165</b>/мес</span><span>Рассрочка на 12 мес: <b>≈€83</b>/мес</span></span>
           </div>
           <ul>
             <li>8 групповых трансформационных встреч с Татьяной</li>
@@ -941,9 +942,9 @@ nav.menu a:hover::after { transform: scaleX(1); }
           <h3>VIP</h3>
           <p class="pitch">Премиальное ведение «за руку» с Татьяной Хавро — до нового финансового максимума.</p>
           <div class="price">
-            <div class="price-row"><span class="now" data-early="€1 990" data-full="€1 990">€1 990</span></div>
+            <div class="price-row"><span class="now" data-early="€2 000" data-full="€2 000">€2 000</span></div>
             <span class="old" data-early="без ранней цены" data-full="&amp;nbsp;">без ранней цены</span>
-            <span class="inst">или <b>€332</b>/мес · рассрочка 6 мес</span>
+            <span class="inst"><span>Рассрочка на 6 мес: <b>€333</b>/мес</span><span>Рассрочка на 12 мес: <b>≈€167</b>/мес</span></span>
           </div>
           <ul>
             <li>8 групповых трансформационных встреч с Татьяной</li>
@@ -984,9 +985,10 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <tr><th scope="row">Ночная перепрошивка</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
             </tbody>
             <tbody class="money">
-              <tr><th scope="row">Обычная цена</th><td><s class="reg">€690</s></td><td><s class="reg">€1 090</s></td><td class="feat"><s class="reg">€1 400</s></td><td class="vip"><span class="reg-plain">€1 990</span></td></tr>
+              <tr><th scope="row">Обычная цена</th><td><s class="reg">€690</s></td><td><s class="reg">€1 090</s></td><td class="feat"><s class="reg">€1 400</s></td><td class="vip"><span class="reg-plain">€2 000</span></td></tr>
               <tr class="early"><th scope="row">Ранняя цена</th><td><span class="ep">€490</span></td><td><span class="ep">€790</span></td><td class="feat"><span class="ep">€990</span></td><td class="vip"><span class="no" aria-label="нет">—</span></td></tr>
-              <tr><th scope="row">Рассрочка на 6 месяцев</th><td><span class="inst-v">€82/мес</span></td><td><span class="inst-v">€132/мес</span></td><td class="feat"><span class="inst-v">€165/мес</span></td><td class="vip"><span class="inst-v">€332/мес</span></td></tr>
+              <tr><th scope="row">Рассрочка на 6 месяцев</th><td><span class="inst-v">€82/мес</span></td><td><span class="inst-v">€132/мес</span></td><td class="feat"><span class="inst-v">€165/мес</span></td><td class="vip"><span class="inst-v">€333/мес</span></td></tr>
+              <tr><th scope="row">Рассрочка на 12 месяцев</th><td><span class="inst-v">≈€41/мес</span></td><td><span class="inst-v">≈€66/мес</span></td><td class="feat"><span class="inst-v">≈€83/мес</span></td><td class="vip"><span class="inst-v">≈€167/мес</span></td></tr>
               <tr><th scope="row">Места</th><td><span class="left"><span aria-hidden="true">🔥</span> Осталось <b>11</b> из 30 мест</span></td><td><span class="left"><span aria-hidden="true">🔥</span> Осталось <b>7</b> из 20 мест</span></td><td class="feat"><span class="left"><span aria-hidden="true">🔥</span> Осталось <b>4</b> из 10 мест</span></td><td class="vip"><span class="left"><span aria-hidden="true">🔥</span> Осталось <b>2</b> из 3 мест</span></td></tr>
             </tbody>
             <tfoot><tr><th scope="row"></th><td><div class="cmp-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div></td><td><div class="cmp-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div></td><td class="feat"><div class="cmp-btns"><a class="btn solid" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div></td><td class="vip"><div class="cmp-btns"><a class="btn gold" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div></td></tr></tfoot>
@@ -997,7 +999,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
             
             <button type="button" class="pk-h" id="pk-btn-0" aria-expanded="false" aria-controls="pk-body-0">
               <span class="pk-name">Записи</span>
-              <span class="pk-prices"><s class="pk-old">€690</s><span class="pk-new">€490</span><span class="pk-inst">или €82/мес · рассрочка 6 мес</span></span>
+              <span class="pk-prices"><s class="pk-old">€690</s><span class="pk-new">€490</span><span class="pk-inst">€82/мес · 6 мес</span><span class="pk-inst">≈€41/мес · 12 мес</span></span>
               <span class="chev" aria-hidden="true"></span>
             </button>
             <div class="pk-b" id="pk-body-0" role="region" aria-labelledby="pk-btn-0"><div class="pk-in">
@@ -1022,7 +1024,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
             
             <button type="button" class="pk-h" id="pk-btn-1" aria-expanded="false" aria-controls="pk-body-1">
               <span class="pk-name">Поток</span>
-              <span class="pk-prices"><s class="pk-old">€1 090</s><span class="pk-new">€790</span><span class="pk-inst">или €132/мес · рассрочка 6 мес</span></span>
+              <span class="pk-prices"><s class="pk-old">€1 090</s><span class="pk-new">€790</span><span class="pk-inst">€132/мес · 6 мес</span><span class="pk-inst">≈€66/мес · 12 мес</span></span>
               <span class="chev" aria-hidden="true"></span>
             </button>
             <div class="pk-b" id="pk-body-1" role="region" aria-labelledby="pk-btn-1"><div class="pk-in">
@@ -1047,7 +1049,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
             <span class="badge">🔥 Самый популярный</span>
             <button type="button" class="pk-h" id="pk-btn-2" aria-expanded="true" aria-controls="pk-body-2">
               <span class="pk-name">Глубина</span>
-              <span class="pk-prices"><s class="pk-old">€1 400</s><span class="pk-new">€990</span><span class="pk-inst">или €165/мес · рассрочка 6 мес</span></span>
+              <span class="pk-prices"><s class="pk-old">€1 400</s><span class="pk-new">€990</span><span class="pk-inst">€165/мес · 6 мес</span><span class="pk-inst">≈€83/мес · 12 мес</span></span>
               <span class="chev" aria-hidden="true"></span>
             </button>
             <div class="pk-b" id="pk-body-2" role="region" aria-labelledby="pk-btn-2"><div class="pk-in">
@@ -1072,7 +1074,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
             
             <button type="button" class="pk-h" id="pk-btn-3" aria-expanded="false" aria-controls="pk-body-3">
               <span class="pk-name">VIP</span>
-              <span class="pk-prices"><span class="pk-new">€1 990</span><span class="pk-inst">или €332/мес · рассрочка 6 мес</span></span>
+              <span class="pk-prices"><span class="pk-new">€2 000</span><span class="pk-inst">€333/мес · 6 мес</span><span class="pk-inst">≈€167/мес · 12 мес</span></span>
               <span class="chev" aria-hidden="true"></span>
             </button>
             <div class="pk-b" id="pk-body-3" role="region" aria-labelledby="pk-btn-3"><div class="pk-in">
@@ -1113,7 +1115,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
         <h2>Частые <span class="b">вопросы</span></h2>
       </div>
       <div class="faq">
-        <details><summary>Можно ли оплатить частями?</summary><p>Да. Любой пакет можно оплатить в рассрочку на 6 месяцев: от €82 в месяц за «Записи» до €332 в месяц за VIP.</p></details>
+        <details><summary>Можно ли оплатить частями?</summary><p>Да. Любой пакет можно оплатить в рассрочку на 6 или на 12 месяцев. На 6 месяцев — от €82 в месяц за «Записи» до €333 в месяц за VIP. На 12 месяцев — от ≈€41 до ≈€167 в месяц.</p></details>
         <details><summary>Что будет с бронью, если я передумаю?</summary><p>Бронь стоит €50 и полностью засчитывается в оплату любого пакета. Если передумаете в течение недели с начала курса, мы вернём бронь.</p></details>
         <details><summary>Чем «Глубина» отличается от «Потока»?</summary><p>В «Глубине» 8 трансформационных встреч с Татьяной проходят вживую, а не в записи. Вместо базовых психотехник вы получаете арсенал лучших, поддержка в чате ежедневная, с терапевтом. Добавляются глубинная проработка травм развития, психотерапевтические протоколы и ночная перепрошивка.</p></details>
         <details><summary>Как работает ранняя цена?</summary><p>Ранняя цена действует для тех, кто оставит бронь в дни практикума. На пакет VIP ранней цены нет.</p></details>
