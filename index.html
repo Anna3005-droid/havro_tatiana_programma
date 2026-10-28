@@ -410,6 +410,20 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
   .pk .cmp-rows li.key { margin-inline: -12px; padding-inline: 12px; }
 }
 
+
+/* tariff results */
+.plans .plan .pitch { font-size: 15px; line-height: 1.45; color: var(--ink); font-weight: 500; padding-left: 14px; border-left: 3px solid var(--blue); }
+.plans .plan.vip .pitch { border-left-color: #D4A73C; }
+.li-val { color: var(--blue-hi); font-weight: 700; }
+.cmp-table tr.result th, .cmp-table tr.result td { background: rgba(255,255,255,.03); vertical-align: top; padding-block: 16px; }
+.cmp-table tr.result td.feat { background: rgba(0, 130, 254, .18); }
+.res-txt { display: block; font-size: 12.6px; line-height: 1.45; font-style: italic; color: var(--ink); text-align: center; }
+.cmp-table td .val { white-space: normal; display: inline-block; max-width: 150px; line-height: 1.35; }
+.pk-res { margin: 0; font-size: 13.5px; line-height: 1.45; font-style: italic; color: var(--ink); padding: 12px 14px; border-radius: 12px; background: rgba(0,130,254,.1); border-left: 3px solid var(--blue); }
+.pk.vip .pk-res { border-left-color: #D4A73C; background: rgba(212,167,60,.08); }
+.pk-res span { display: block; font-style: normal; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--blue-hi); font-weight: 700; margin-bottom: 4px; }
+.pk .cmp-rows .val { white-space: normal; text-align: right; max-width: 150px; }
+
 /* deposit ticket */
 .ticket { margin-top: 40px; display: grid; grid-template-columns: 220px minmax(0, 1fr); border-radius: 22px; overflow: hidden; position: relative; background: var(--blue); box-shadow: 0 24px 50px -28px rgba(0,130,254,.9); }
 .ticket-l { padding: 24px 28px; display: grid; gap: 2px; align-content: center; background: rgba(0,0,0,.14); }
@@ -858,17 +872,17 @@ nav.menu a:hover::after { transform: scaleX(1); }
         <article class="plan" data-lvl="1" style="--lvl:1">
           <div class="plan-top"><span class="lvl">Уровень 1</span><span class="gauge" aria-label="Уровень 1 из 4"><i></i><i></i><i></i><i></i></span></div>
           <h3>Записи</h3>
-          <p class="pitch">Смотрите в своём темпе</p>
+          <p class="pitch">Снимите внутренние запреты на деньги и подготовьте психику к росту в своём темпе</p>
           <div class="price">
             <div class="price-row"><span class="now" data-early="€490" data-full="€690">€490</span><span class="save" data-early="−€200" data-full="">−€200</span></div>
             <span class="old" data-early="&lt;s&gt;€690&lt;/s&gt;" data-full="&amp;nbsp;"><s>€690</s></span>
             <span class="inst">или <b>€82</b>/мес · рассрочка 6 мес</span>
           </div>
           <ul>
-            <li>Шесть занятий в записи, доступ через сутки после эфира</li>
-            <li>Базовые упражнения и психотехники</li>
-            <li>Доступ к материалам 3 месяца</li>
-            <li>Общий чат потока</li>
+            <li><span>8 групповых трансформационных встреч с Татьяной: <b class="li-val">в записи</b></span></li>
+            <li>База знаний</li>
+            <li>Практики для проработок</li>
+            <li><span>Психотехники: <b class="li-val">базовые</b></span></li>
           </ul>
           <div class="seats"><span class="seats-txt"><span aria-hidden="true">🔥</span> Осталось <b>11</b> из 30 мест</span><span class="dots-row" aria-hidden="true"><span class="dots" style="--n:11"></span><span class="dots taken" style="--n:19"></span></span></div>
           <div class="plan-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
@@ -877,17 +891,19 @@ nav.menu a:hover::after { transform: scaleX(1); }
         <article class="plan" data-lvl="2" style="--lvl:2">
           <div class="plan-top"><span class="lvl">Уровень 2</span><span class="gauge" aria-label="Уровень 2 из 4"><i></i><i></i><i></i><i></i></span></div>
           <h3>Поток</h3>
-          <p class="pitch">Живое участие с куратором</p>
+          <p class="pitch">Пробейте финансовый потолок в сильном окружении и зафиксируйте новый уровень дохода без откатов</p>
           <div class="price">
             <div class="price-row"><span class="now" data-early="€790" data-full="€1 090">€790</span><span class="save" data-early="−€300" data-full="">−€300</span></div>
             <span class="old" data-early="&lt;s&gt;€1 090&lt;/s&gt;" data-full="&amp;nbsp;"><s>€1 090</s></span>
             <span class="inst">или <b>€132</b>/мес · рассрочка 6 мес</span>
           </div>
           <ul>
-            <li class="inc">Всё из «Записей»</li>
-            <li>Живое участие во всех шести занятиях с вопросами</li>
-            <li>Куратор</li>
-            <li>Доступ к материалам 6 месяцев</li>
+            <li><span>8 групповых трансформационных встреч с Татьяной: <b class="li-val">в записи</b></span></li>
+            <li>8 сессий глубокой групповой терапии</li>
+            <li>База знаний</li>
+            <li>Практики для проработок</li>
+            <li><span>Психотехники: <b class="li-val">базовые</b></span></li>
+            <li><span>Поддержка в чате: <b class="li-val">чат поддержки</b></span></li>
             <li>Приложение «Проработчик денег»</li>
           </ul>
           <div class="seats"><span class="seats-txt"><span aria-hidden="true">🔥</span> Осталось <b>7</b> из 20 мест</span><span class="dots-row" aria-hidden="true"><span class="dots" style="--n:7"></span><span class="dots taken" style="--n:13"></span></span></div>
@@ -898,20 +914,23 @@ nav.menu a:hover::after { transform: scaleX(1); }
           <span class="badge">Выбор участников</span>
           <div class="plan-top"><span class="lvl">Уровень 3</span><span class="gauge" aria-label="Уровень 3 из 4"><i></i><i></i><i></i><i></i></span></div>
           <h3>Глубина</h3>
-          <p class="pitch">Личная работа с Татьяной</p>
+          <p class="pitch">Перепрошивка подсознания и снятие ограничений для безопасного выхода на стабильные Х3–Х5 дохода</p>
           <div class="price">
             <div class="price-row"><span class="now" data-early="€990" data-full="€1 400">€990</span><span class="save" data-early="−€410" data-full="">−€410</span></div>
             <span class="old" data-early="&lt;s&gt;€1 400&lt;/s&gt;" data-full="&amp;nbsp;"><s>€1 400</s></span>
             <span class="inst">или <b>€165</b>/мес · рассрочка 6 мес</span>
           </div>
           <ul>
-            <li class="inc">Всё из «Потока»</li>
-            <li>Личная работа «Точка сборки» с Татьяной</li>
-            <li>Работа с травмами развития</li>
-            <li>Разбор своего случая в группе</li>
-            <li>3 месяца в группе «Метафизика бизнеса»</li>
-            <li>Доступ к материалам навсегда</li>
-            <li>VIP-чат с ответами Татьяны</li>
+            <li>8 групповых трансформационных встреч с Татьяной</li>
+            <li>8 сессий глубокой групповой терапии</li>
+            <li>База знаний</li>
+            <li>Практики для проработок</li>
+            <li><span>Психотехники: <b class="li-val">арсенал лучших</b></span></li>
+            <li><span>Поддержка в чате: <b class="li-val">ежедневно, терапевт в ОС</b></span></li>
+            <li>Приложение «Проработчик денег»</li>
+            <li>Глубинная проработка травм развития</li>
+            <li>Психотерапевтические протоколы</li>
+            <li>Ночная перепрошивка</li>
           </ul>
           <div class="seats"><span class="seats-txt"><span aria-hidden="true">🔥</span> Осталось <b>4</b> из 10 мест</span><span class="dots-row" aria-hidden="true"><span class="dots" style="--n:4"></span><span class="dots taken" style="--n:6"></span></span></div>
           <div class="plan-btns"><a class="btn solid pulse" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
@@ -920,17 +939,23 @@ nav.menu a:hover::after { transform: scaleX(1); }
         <article class="plan vip" data-lvl="4" style="--lvl:4">
           <div class="plan-top"><span class="lvl">Уровень 4</span><span class="gauge" aria-label="Уровень 4 из 4"><i></i><i></i><i></i><i></i></span></div>
           <h3>VIP</h3>
-          <p class="pitch">Индивидуальный маршрут</p>
+          <p class="pitch">Премиальное ведение за руку с Татьяной Хавро до нового финансового максимума</p>
           <div class="price">
             <div class="price-row"><span class="now" data-early="€1 990" data-full="€1 990">€1 990</span></div>
             <span class="old" data-early="без ранней цены" data-full="&amp;nbsp;">без ранней цены</span>
             <span class="inst">или <b>€332</b>/мес · рассрочка 6 мес</span>
           </div>
           <ul>
-            <li class="inc">Всё из «Глубины»</li>
-            <li>4 глубинные сессии индивидуально</li>
-            <li>Личный маршрут проработки</li>
-            <li>Прямая связь с Татьяной между сессиями</li>
+            <li>8 групповых трансформационных встреч с Татьяной</li>
+            <li>8 сессий глубокой групповой терапии</li>
+            <li>База знаний</li>
+            <li>Практики для проработок</li>
+            <li><span>Психотехники: <b class="li-val">арсенал лучших</b></span></li>
+            <li><span>Поддержка в чате: <b class="li-val">ежедневно, терапевт</b></span></li>
+            <li>Приложение «Проработчик денег»</li>
+            <li>Глубинная проработка травм развития</li>
+            <li>Психотерапевтические протоколы</li>
+            <li>Ночная перепрошивка</li>
           </ul>
           <div class="seats"><span class="seats-txt"><span aria-hidden="true">🔥</span> Осталось <b>2</b> из 3 мест</span><span class="dots-row" aria-hidden="true"><span class="dots" style="--n:2"></span><span class="dots taken" style="--n:1"></span></span></div>
           <div class="plan-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
@@ -944,23 +969,19 @@ nav.menu a:hover::after { transform: scaleX(1); }
         </div>
         <div class="cmp-table-wrap">
           <table class="cmp-table">
-            <thead><tr><th scope="col" class="c-first">Что входит</th><th scope="col"><span class="th-name">Записи</span></th><th scope="col"><span class="th-name">Поток</span></th><th scope="col" class="feat"><span class="badge">🔥 Самый популярный</span><span class="th-name">Глубина</span></th><th scope="col" class="vip"><span class="th-name">VIP</span></th></tr></thead>
+            <thead><tr><th scope="col" class="c-first">Параметр</th><th scope="col"><span class="th-name">Записи</span></th><th scope="col"><span class="th-name">Поток</span></th><th scope="col" class="feat"><span class="badge">🔥 Самый популярный</span><span class="th-name">Глубина</span></th><th scope="col" class="vip"><span class="th-name">VIP</span></th></tr></thead>
             <tbody>
-              <tr><th scope="row">Шесть занятий в записи, доступ через сутки после эфира</th><td><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Базовые упражнения и психотехники</th><td><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Общий чат потока</th><td><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Живое участие во всех шести занятиях с вопросами</th><td><span class="no" aria-label="нет">—</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Куратор</th><td><span class="no" aria-label="нет">—</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr class="result"><th scope="row">Результат тарифа</th><td><span class="res-txt">Снимите внутренние запреты на деньги и подготовьте психику к росту в своём темпе</span></td><td><span class="res-txt">Пробейте финансовый потолок в сильном окружении и зафиксируйте новый уровень дохода без откатов</span></td><td class="feat"><span class="res-txt">Перепрошивка подсознания и снятие ограничений для безопасного выхода на стабильные Х3–Х5 дохода</span></td><td class="vip"><span class="res-txt">Премиальное ведение за руку с Татьяной Хавро до нового финансового максимума</span></td></tr>
+              <tr><th scope="row">8 групповых трансформационных встреч с Татьяной</th><td><span class="val">в записи</span></td><td><span class="val">в записи</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">8 сессий глубокой групповой терапии</th><td><span class="no" aria-label="нет">—</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">База знаний</th><td><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">Практики для проработок</th><td><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">Психотехники</th><td><span class="val">базовые</span></td><td><span class="val">базовые</span></td><td class="feat"><span class="val">арсенал лучших</span></td><td class="vip"><span class="val">арсенал лучших</span></td></tr>
+              <tr><th scope="row">Поддержка в чате</th><td><span class="no" aria-label="нет">—</span></td><td><span class="val">чат поддержки</span></td><td class="feat"><span class="val">ежедневно, терапевт в ОС</span></td><td class="vip"><span class="val">ежедневно, терапевт</span></td></tr>
               <tr><th scope="row">Приложение «Проработчик денег»</th><td><span class="no" aria-label="нет">—</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr class="key"><th scope="row">Личная работа «Точка сборки» с Татьяной</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Работа с травмами развития</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Разбор своего случая в группе</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">3 месяца в группе «Метафизика бизнеса»</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">VIP-чат с ответами Татьяны</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">4 глубинные сессии индивидуально</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="no" aria-label="нет">—</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Личный маршрут проработки</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="no" aria-label="нет">—</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Прямая связь с Татьяной между сессиями</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="no" aria-label="нет">—</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Доступ к материалам</th><td><span class="val">3 мес</span></td><td><span class="val">6 мес</span></td><td class="feat"><span class="val">навсегда</span></td><td class="vip"><span class="val">навсегда</span></td></tr>
+              <tr><th scope="row">Глубинная проработка травм развития</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">Психотерапевтические протоколы</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">Ночная перепрошивка</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
             </tbody>
             <tbody class="money">
               <tr><th scope="row">Обычная цена</th><td><s class="reg">€690</s></td><td><s class="reg">€1 090</s></td><td class="feat"><s class="reg">€1 400</s></td><td class="vip"><span class="reg-plain">€1 990</span></td></tr>
@@ -980,22 +1001,18 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <span class="chev" aria-hidden="true"></span>
             </button>
             <div class="pk-b" id="pk-body-0" role="region" aria-labelledby="pk-btn-0"><div class="pk-in">
+              <p class="pk-res"><span>Результат тарифа</span>Снимите внутренние запреты на деньги и подготовьте психику к росту в своём темпе</p>
               <ul class="cmp-rows">
-              <li class="on"><span class="c-label">Шесть занятий в записи, доступ через сутки после эфира</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Базовые упражнения и психотехники</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Общий чат потока</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="off"><span class="c-label">Живое участие во всех шести занятиях с вопросами</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">Куратор</span><span class="no" aria-label="нет">—</span></li>
+              <li class="on"><span class="c-label">8 групповых трансформационных встреч с Татьяной</span><span class="val">в записи</span></li>
+              <li class="off"><span class="c-label">8 сессий глубокой групповой терапии</span><span class="no" aria-label="нет">—</span></li>
+              <li class="on"><span class="c-label">База знаний</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Практики для проработок</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Психотехники</span><span class="val">базовые</span></li>
+              <li class="off"><span class="c-label">Поддержка в чате</span><span class="no" aria-label="нет">—</span></li>
               <li class="off"><span class="c-label">Приложение «Проработчик денег»</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off key"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">Работа с травмами развития</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">Разбор своего случая в группе</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">3 месяца в группе «Метафизика бизнеса»</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">VIP-чат с ответами Татьяны</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">4 глубинные сессии индивидуально</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">Личный маршрут проработки</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">Прямая связь с Татьяной между сессиями</span><span class="no" aria-label="нет">—</span></li>
-              <li class="on"><span class="c-label">Доступ к материалам</span><span class="val">3 мес</span></li>
+              <li class="off"><span class="c-label">Глубинная проработка травм развития</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off"><span class="c-label">Психотерапевтические протоколы</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off"><span class="c-label">Ночная перепрошивка</span><span class="no" aria-label="нет">—</span></li>
               </ul>
               <p class="left"><span aria-hidden="true">🔥</span> Осталось <b>11</b> из 30 мест</p>
               <div class="cmp-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
@@ -1009,22 +1026,18 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <span class="chev" aria-hidden="true"></span>
             </button>
             <div class="pk-b" id="pk-body-1" role="region" aria-labelledby="pk-btn-1"><div class="pk-in">
+              <p class="pk-res"><span>Результат тарифа</span>Пробейте финансовый потолок в сильном окружении и зафиксируйте новый уровень дохода без откатов</p>
               <ul class="cmp-rows">
-              <li class="on"><span class="c-label">Шесть занятий в записи, доступ через сутки после эфира</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Базовые упражнения и психотехники</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Общий чат потока</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Живое участие во всех шести занятиях с вопросами</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Куратор</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">8 групповых трансформационных встреч с Татьяной</span><span class="val">в записи</span></li>
+              <li class="on"><span class="c-label">8 сессий глубокой групповой терапии</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">База знаний</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Практики для проработок</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Психотехники</span><span class="val">базовые</span></li>
+              <li class="on"><span class="c-label">Поддержка в чате</span><span class="val">чат поддержки</span></li>
               <li class="on"><span class="c-label">Приложение «Проработчик денег»</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="off key"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">Работа с травмами развития</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">Разбор своего случая в группе</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">3 месяца в группе «Метафизика бизнеса»</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">VIP-чат с ответами Татьяны</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">4 глубинные сессии индивидуально</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">Личный маршрут проработки</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">Прямая связь с Татьяной между сессиями</span><span class="no" aria-label="нет">—</span></li>
-              <li class="on"><span class="c-label">Доступ к материалам</span><span class="val">6 мес</span></li>
+              <li class="off"><span class="c-label">Глубинная проработка травм развития</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off"><span class="c-label">Психотерапевтические протоколы</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off"><span class="c-label">Ночная перепрошивка</span><span class="no" aria-label="нет">—</span></li>
               </ul>
               <p class="left"><span aria-hidden="true">🔥</span> Осталось <b>7</b> из 20 мест</p>
               <div class="cmp-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
@@ -1038,22 +1051,18 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <span class="chev" aria-hidden="true"></span>
             </button>
             <div class="pk-b" id="pk-body-2" role="region" aria-labelledby="pk-btn-2"><div class="pk-in">
+              <p class="pk-res"><span>Результат тарифа</span>Перепрошивка подсознания и снятие ограничений для безопасного выхода на стабильные Х3–Х5 дохода</p>
               <ul class="cmp-rows">
-              <li class="on"><span class="c-label">Шесть занятий в записи, доступ через сутки после эфира</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Базовые упражнения и психотехники</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Общий чат потока</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Живое участие во всех шести занятиях с вопросами</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Куратор</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">8 групповых трансформационных встреч с Татьяной</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">8 сессий глубокой групповой терапии</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">База знаний</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Практики для проработок</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Психотехники</span><span class="val">арсенал лучших</span></li>
+              <li class="on"><span class="c-label">Поддержка в чате</span><span class="val">ежедневно, терапевт в ОС</span></li>
               <li class="on"><span class="c-label">Приложение «Проработчик денег»</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on key"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Работа с травмами развития</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Разбор своего случая в группе</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">3 месяца в группе «Метафизика бизнеса»</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">VIP-чат с ответами Татьяны</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="off"><span class="c-label">4 глубинные сессии индивидуально</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">Личный маршрут проработки</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off"><span class="c-label">Прямая связь с Татьяной между сессиями</span><span class="no" aria-label="нет">—</span></li>
-              <li class="on"><span class="c-label">Доступ к материалам</span><span class="val">навсегда</span></li>
+              <li class="on"><span class="c-label">Глубинная проработка травм развития</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Психотерапевтические протоколы</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Ночная перепрошивка</span><span class="yes" aria-label="есть">✔</span></li>
               </ul>
               <p class="left"><span aria-hidden="true">🔥</span> Осталось <b>4</b> из 10 мест</p>
               <div class="cmp-btns"><a class="btn solid" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
@@ -1067,22 +1076,18 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <span class="chev" aria-hidden="true"></span>
             </button>
             <div class="pk-b" id="pk-body-3" role="region" aria-labelledby="pk-btn-3"><div class="pk-in">
+              <p class="pk-res"><span>Результат тарифа</span>Премиальное ведение за руку с Татьяной Хавро до нового финансового максимума</p>
               <ul class="cmp-rows">
-              <li class="on"><span class="c-label">Шесть занятий в записи, доступ через сутки после эфира</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Базовые упражнения и психотехники</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Общий чат потока</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Живое участие во всех шести занятиях с вопросами</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Куратор</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">8 групповых трансформационных встреч с Татьяной</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">8 сессий глубокой групповой терапии</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">База знаний</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Практики для проработок</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Психотехники</span><span class="val">арсенал лучших</span></li>
+              <li class="on"><span class="c-label">Поддержка в чате</span><span class="val">ежедневно, терапевт</span></li>
               <li class="on"><span class="c-label">Приложение «Проработчик денег»</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on key"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Работа с травмами развития</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Разбор своего случая в группе</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">3 месяца в группе «Метафизика бизнеса»</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">VIP-чат с ответами Татьяны</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">4 глубинные сессии индивидуально</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Личный маршрут проработки</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Прямая связь с Татьяной между сессиями</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on"><span class="c-label">Доступ к материалам</span><span class="val">навсегда</span></li>
+              <li class="on"><span class="c-label">Глубинная проработка травм развития</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Психотерапевтические протоколы</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Ночная перепрошивка</span><span class="yes" aria-label="есть">✔</span></li>
               </ul>
               <p class="left"><span aria-hidden="true">🔥</span> Осталось <b>2</b> из 3 мест</p>
               <div class="cmp-btns"><a class="btn gold" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
@@ -1110,7 +1115,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
       <div class="faq">
         <details><summary>Можно ли оплатить частями?</summary><p>Да. Любой пакет можно оплатить в рассрочку на 6 месяцев: от €82 в месяц за «Записи» до €332 в месяц за VIP.</p></details>
         <details><summary>Что будет с бронью, если я передумаю?</summary><p>Бронь стоит €50 и полностью засчитывается в оплату любого пакета. Если передумаете в течение недели с начала курса, мы вернём бронь.</p></details>
-        <details><summary>Чем «Глубина» отличается от «Потока»?</summary><p>В «Глубину» входит личная работа «Точка сборки» с Татьяной, работа с травмами развития, разбор вашего случая в группе, 3 месяца в группе «Метафизика бизнеса», доступ к материалам навсегда и VIP-чат с ответами Татьяны.</p></details>
+        <details><summary>Чем «Глубина» отличается от «Потока»?</summary><p>В «Глубине» 8 трансформационных встреч с Татьяной проходят вживую, а не в записи. Вместо базовых психотехник вы получаете арсенал лучших, поддержка в чате ежедневная, с терапевтом. Добавляются глубинная проработка травм развития, психотерапевтические протоколы и ночная перепрошивка.</p></details>
         <details><summary>Как работает ранняя цена?</summary><p>Ранняя цена действует для тех, кто оставит бронь в дни практикума. На пакет VIP ранней цены нет.</p></details>
       </div>
     </div>
