@@ -445,6 +445,19 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
 .plan li.key-vip { color: #E8C062; font-weight: 700; }
 .plan li.key-vip::before { color: #1A1406; background: linear-gradient(135deg, #F3D27A, #D4A73C); }
 
+
+/* VIP tab in gold */
+.tab.vip { border-color: rgba(212,167,60,.65); background: linear-gradient(180deg, rgba(212,167,60,.12), var(--surface)); }
+.tab.vip:hover { border-color: #D4A73C; }
+.tab.vip .t-name { background: linear-gradient(90deg, #F3D27A, #D4A73C); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tab.vip .t-meta { color: #E8C062; }
+.tab.vip .gauge i.on { background: #D4A73C; box-shadow: 0 0 10px rgba(212,167,60,.6); }
+.tab.vip[aria-selected="true"] { background: linear-gradient(135deg, #F3D27A, #D4A73C 55%, #B8862A); border-color: #D4A73C; box-shadow: 0 16px 36px -14px rgba(212,167,60,.85); }
+.tab.vip[aria-selected="true"] .t-name { background: none; color: #1A1406; }
+.tab.vip[aria-selected="true"] .t-meta { color: #1A1406; }
+.tab.vip[aria-selected="true"] .gauge i { background: rgba(26,20,6,.25) !important; }
+.tab.vip[aria-selected="true"] .gauge i.on { background: #1A1406 !important; box-shadow: none; }
+
 /* deposit ticket */
 .ticket { margin-top: 40px; display: grid; grid-template-columns: 220px minmax(0, 1fr); border-radius: 22px; overflow: hidden; position: relative; background: var(--blue); box-shadow: 0 24px 50px -28px rgba(0,130,254,.9); }
 .ticket-l { padding: 24px 28px; display: grid; gap: 2px; align-content: center; background: rgba(0,0,0,.14); }
@@ -1221,7 +1234,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
       var lvl = i + 1, name = p.querySelector('h3').textContent, now = p.querySelector('.price .now');
       function seatsLabel(pl) { var b = pl.querySelector('.seats-txt b'); if (!b) return ''; var n = parseInt(b.textContent, 10), m10 = n % 10, m100 = n % 100; var w = (m10 === 1 && m100 !== 11) ? 'место' : (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) ? 'места' : 'мест'; return n + '&nbsp;' + w; }
       var b = document.createElement('button');
-      b.type = 'button'; b.className = 'tab'; b.id = 'tab-' + i; b.setAttribute('role', 'tab'); b.setAttribute('aria-controls', p.id);
+      b.type = 'button'; b.className = 'tab' + (p.classList.contains('vip') ? ' vip' : ''); b.id = 'tab-' + i; b.setAttribute('role', 'tab'); b.setAttribute('aria-controls', p.id);
       p.setAttribute('aria-labelledby', b.id);
       var g = '<span class="gauge" aria-hidden="true">' + [1, 2, 3, 4].map(function (k) { return '<i class="' + (k <= lvl ? 'on' : '') + '"></i>'; }).join('') + '</span>';
       b.innerHTML = '<span class="t-top">' + g + (p.classList.contains('feat') ? '<span class="t-hit">Хит</span>' : '') + '</span><span class="t-name">' + name + '</span><span class="t-meta"><span class="t-price" data-early="' + now.dataset.early + '" data-full="' + now.dataset.full + '">' + now.textContent + '</span> · ' + seatsLabel(p) + '</span>';
