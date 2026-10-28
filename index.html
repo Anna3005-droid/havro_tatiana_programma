@@ -425,6 +425,26 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
 .pk-res span { display: block; font-style: normal; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--blue-hi); font-weight: 700; margin-bottom: 4px; }
 .pk .cmp-rows .val { white-space: normal; text-align: right; max-width: 150px; }
 
+
+/* key differences: «Метафизика бизнеса» for Глубина, VIP extras in gold */
+.cmp-table tr.key-deep th, .cmp-table tr.key-deep td { background: rgba(0,130,254,.16); }
+.cmp-table tr.key-deep th { color: var(--blue-hi); font-weight: 700; box-shadow: inset 3px 0 0 var(--blue); }
+.cmp-table tr.key-deep td.feat { background: rgba(0,130,254,.3); }
+.cmp-table tr.key-vip th, .cmp-table tr.key-vip td { background: rgba(212,167,60,.1); }
+.cmp-table tr.key-vip th { color: #E8C062; font-weight: 700; box-shadow: inset 3px 0 0 #D4A73C; }
+.cmp-table tr.key-vip td.vip { background: rgba(212,167,60,.22); }
+.cmp-table tr.key-vip td.vip .yes { background: linear-gradient(135deg, #F3D27A, #D4A73C); color: #1A1406; }
+.pk .cmp-rows li.key-deep { background: rgba(0,130,254,.14); margin-inline: -16px; padding-inline: 16px; box-shadow: inset 3px 0 0 var(--blue); }
+.pk .cmp-rows li.key-deep .c-label { color: var(--blue-hi); font-weight: 700; }
+.pk .cmp-rows li.key-vip { background: rgba(212,167,60,.1); margin-inline: -16px; padding-inline: 16px; box-shadow: inset 3px 0 0 #D4A73C; }
+.pk .cmp-rows li.key-vip .c-label { color: #E8C062; font-weight: 700; }
+.pk .cmp-rows li.key-vip.off .c-label, .pk .cmp-rows li.key-deep.off .c-label { opacity: .55; }
+.pk .cmp-rows li.key-vip.on .yes { background: linear-gradient(135deg, #F3D27A, #D4A73C); color: #1A1406; }
+@media (max-width: 380px) { .pk .cmp-rows li.key-deep, .pk .cmp-rows li.key-vip { margin-inline: -12px; padding-inline: 12px; } }
+.plan li.key-deep { color: var(--blue-hi); font-weight: 700; }
+.plan li.key-vip { color: #E8C062; font-weight: 700; }
+.plan li.key-vip::before { color: #1A1406; background: linear-gradient(135deg, #F3D27A, #D4A73C); }
+
 /* deposit ticket */
 .ticket { margin-top: 40px; display: grid; grid-template-columns: 220px minmax(0, 1fr); border-radius: 22px; overflow: hidden; position: relative; background: var(--blue); box-shadow: 0 24px 50px -28px rgba(0,130,254,.9); }
 .ticket-l { padding: 24px 28px; display: grid; gap: 2px; align-content: center; background: rgba(0,0,0,.14); }
@@ -932,6 +952,8 @@ nav.menu a:hover::after { transform: scaleX(1); }
             <li>Глубинная проработка травм развития</li>
             <li>Психотерапевтические протоколы</li>
             <li>Ночная перепрошивка</li>
+            <li class="key-deep">3 участия в «Метафизике бизнеса»</li>
+            <li>Доступ навсегда и VIP-чат</li>
           </ul>
           <div class="seats"><span class="seats-txt"><span aria-hidden="true">🔥</span> Осталось <b>4</b> из 10 мест</span><span class="dots-row" aria-hidden="true"><span class="dots" style="--n:4"></span><span class="dots taken" style="--n:6"></span></span></div>
           <div class="plan-btns"><a class="btn solid pulse" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
@@ -957,6 +979,10 @@ nav.menu a:hover::after { transform: scaleX(1); }
             <li>Глубинная проработка травм развития</li>
             <li>Психотерапевтические протоколы</li>
             <li>Ночная перепрошивка</li>
+            <li class="key-deep">3 участия в «Метафизике бизнеса»</li>
+            <li>Доступ навсегда и VIP-чат</li>
+            <li class="key-vip">Личная работа «Точка сборки» с Татьяной</li>
+            <li class="key-vip">4 глубинные индивидуальные сессии</li>
           </ul>
           <div class="seats"><span class="seats-txt"><span aria-hidden="true">🔥</span> Осталось <b>2</b> из 3 мест</span><span class="dots-row" aria-hidden="true"><span class="dots" style="--n:2"></span><span class="dots taken" style="--n:1"></span></span></div>
           <div class="plan-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
@@ -983,6 +1009,10 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <tr><th scope="row">Глубинная проработка травм развития</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
               <tr><th scope="row">Психотерапевтические протоколы</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
               <tr><th scope="row">Ночная перепрошивка</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr class="key-deep"><th scope="row">3 участия в «Метафизике бизнеса»</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">Доступ навсегда и VIP-чат</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr class="key-vip"><th scope="row">Личная работа «Точка сборки» с Татьяной</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="no" aria-label="нет">—</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr class="key-vip"><th scope="row">4 глубинные индивидуальные сессии</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="no" aria-label="нет">—</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
             </tbody>
             <tbody class="money">
               <tr><th scope="row">Обычная цена</th><td><s class="reg">€690</s></td><td><s class="reg">€1 090</s></td><td class="feat"><s class="reg">€1 400</s></td><td class="vip"><span class="reg-plain">€2 000</span></td></tr>
@@ -1015,6 +1045,10 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <li class="off"><span class="c-label">Глубинная проработка травм развития</span><span class="no" aria-label="нет">—</span></li>
               <li class="off"><span class="c-label">Психотерапевтические протоколы</span><span class="no" aria-label="нет">—</span></li>
               <li class="off"><span class="c-label">Ночная перепрошивка</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off key-deep"><span class="c-label">3 участия в «Метафизике бизнеса»</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off"><span class="c-label">Доступ навсегда и VIP-чат</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off key-vip"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off key-vip"><span class="c-label">4 глубинные индивидуальные сессии</span><span class="no" aria-label="нет">—</span></li>
               </ul>
               <p class="left"><span aria-hidden="true">🔥</span> Осталось <b>11</b> из 30 мест</p>
               <div class="cmp-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
@@ -1040,6 +1074,10 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <li class="off"><span class="c-label">Глубинная проработка травм развития</span><span class="no" aria-label="нет">—</span></li>
               <li class="off"><span class="c-label">Психотерапевтические протоколы</span><span class="no" aria-label="нет">—</span></li>
               <li class="off"><span class="c-label">Ночная перепрошивка</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off key-deep"><span class="c-label">3 участия в «Метафизике бизнеса»</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off"><span class="c-label">Доступ навсегда и VIP-чат</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off key-vip"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off key-vip"><span class="c-label">4 глубинные индивидуальные сессии</span><span class="no" aria-label="нет">—</span></li>
               </ul>
               <p class="left"><span aria-hidden="true">🔥</span> Осталось <b>7</b> из 20 мест</p>
               <div class="cmp-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
@@ -1065,6 +1103,10 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <li class="on"><span class="c-label">Глубинная проработка травм развития</span><span class="yes" aria-label="есть">✔</span></li>
               <li class="on"><span class="c-label">Психотерапевтические протоколы</span><span class="yes" aria-label="есть">✔</span></li>
               <li class="on"><span class="c-label">Ночная перепрошивка</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on key-deep"><span class="c-label">3 участия в «Метафизике бизнеса»</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Доступ навсегда и VIP-чат</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="off key-vip"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off key-vip"><span class="c-label">4 глубинные индивидуальные сессии</span><span class="no" aria-label="нет">—</span></li>
               </ul>
               <p class="left"><span aria-hidden="true">🔥</span> Осталось <b>4</b> из 10 мест</p>
               <div class="cmp-btns"><a class="btn solid" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
@@ -1090,6 +1132,10 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <li class="on"><span class="c-label">Глубинная проработка травм развития</span><span class="yes" aria-label="есть">✔</span></li>
               <li class="on"><span class="c-label">Психотерапевтические протоколы</span><span class="yes" aria-label="есть">✔</span></li>
               <li class="on"><span class="c-label">Ночная перепрошивка</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on key-deep"><span class="c-label">3 участия в «Метафизике бизнеса»</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Доступ навсегда и VIP-чат</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on key-vip"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on key-vip"><span class="c-label">4 глубинные индивидуальные сессии</span><span class="yes" aria-label="есть">✔</span></li>
               </ul>
               <p class="left"><span aria-hidden="true">🔥</span> Осталось <b>2</b> из 3 мест</p>
               <div class="cmp-btns"><a class="btn gold" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
