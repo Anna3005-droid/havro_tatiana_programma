@@ -458,6 +458,12 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
 .tab.vip[aria-selected="true"] .gauge i { background: rgba(26,20,6,.25) !important; }
 .tab.vip[aria-selected="true"] .gauge i.on { background: #1A1406 !important; box-shadow: none; }
 
+
+/* tariffs temporarily hidden: remove class "no-tariffs" from <body> to bring them back */
+.no-tariffs #prices, .no-tariffs #faq, .no-tariffs .mcta,
+.no-tariffs nav.menu a[href="#prices"], .no-tariffs nav.menu a[href="#faq"],
+.no-tariffs a.btn[href="#prices"] { display: none !important; }
+
 /* deposit ticket */
 .ticket { margin-top: 40px; display: grid; grid-template-columns: 220px minmax(0, 1fr); border-radius: 22px; overflow: hidden; position: relative; background: var(--blue); box-shadow: 0 24px 50px -28px rgba(0,130,254,.9); }
 .ticket-l { padding: 24px 28px; display: grid; gap: 2px; align-content: center; background: rgba(0,0,0,.14); }
@@ -629,7 +635,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
 </style>
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
-<body>
+<body class="no-tariffs">
 
 <header class="top">
   <div class="wrap">
