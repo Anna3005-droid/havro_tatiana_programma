@@ -220,7 +220,7 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
 @keyframes spin { to { --ang: 360deg; } }
 @media (min-width: 1081px) { .plan.feat { transform: translateY(-14px); } .plan.feat:hover { transform: translateY(-20px); } }
 .badge { position: absolute; top: -14px; left: 50%; translate: -50% 0; z-index: 2; white-space: nowrap; background: linear-gradient(90deg, var(--blue), #3EA3FF); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; padding: 7px 16px; border-radius: 999px; box-shadow: 0 8px 20px -6px rgba(0,130,254,.9); animation: bob 2.6s ease-in-out infinite; }
-.plan.vip h3 { background: linear-gradient(90deg, #fff, #9BD0FF, #fff); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: sheen 5s linear infinite; }
+.plan.gold h3 { background: linear-gradient(90deg, #fff, #9BD0FF, #fff); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: sheen 5s linear infinite; }
 
 
 /* tariff tabs: click a tariff, see its card */
@@ -354,7 +354,7 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
 .cmp-table thead th.feat { background: linear-gradient(180deg, #0F3470, rgba(0,130,254,.12)); box-shadow: inset 2px 0 0 var(--blue), inset -2px 0 0 var(--blue), inset 0 2px 0 var(--blue); border-radius: 16px 16px 0 0; }
 .cmp-table tfoot td.feat { box-shadow: inset 2px 0 0 var(--blue), inset -2px 0 0 var(--blue), inset 0 -2px 0 var(--blue); border-radius: 0 0 16px 16px; }
 .cmp-table thead th.feat .th-name { color: #fff; }
-.cmp-table thead th.vip .th-name { background: linear-gradient(90deg, #F3D27A, #D4A73C); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cmp-table thead th.gold .th-name { background: linear-gradient(90deg, #F3D27A, #D4A73C); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .cmp-table .badge { position: absolute; top: -12px; left: 50%; translate: -50% 0; font-size: 9.5px; padding: 5px 10px; }
 .cmp-table tr.key th, .cmp-table tr.key td { background: rgba(245, 197, 66, .1); }
 .cmp-table tr.key th { color: #F5C542; font-weight: 700; box-shadow: inset 3px 0 0 #F5C542; }
@@ -379,7 +379,7 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
   .pk { position: relative; background: var(--surface); border-radius: 20px; border: 1px solid rgba(255,255,255,.08); transition: border-color .3s, background .3s; }
   .pk.open { border-color: rgba(0,130,254,.45); }
   .pk.feat { border: 2px solid var(--blue); background: linear-gradient(180deg, #0F3470 0%, var(--surface) 60%); margin-top: 10px; }
-  .pk.vip .pk-name { background: linear-gradient(90deg, #F3D27A, #D4A73C); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .pk.gold .pk-name { background: linear-gradient(90deg, #F3D27A, #D4A73C); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .pk .badge { left: 18px; translate: none; top: -13px; }
   .pk-h { width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) auto 32px; gap: 12px; align-items: center; text-align: left; background: none; border: 0; color: var(--ink); padding: 18px 16px; cursor: pointer; font: inherit; border-radius: 20px; }
   .pk-name { font-family: var(--display); font-size: 26px; font-weight: 700; text-transform: uppercase; line-height: 1; }
@@ -415,14 +415,14 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
 
 /* tariff results */
 .plans .plan .pitch { font-size: 15px; line-height: 1.45; color: var(--ink); font-weight: 500; padding-left: 14px; border-left: 3px solid var(--blue); }
-.plans .plan.vip .pitch { border-left-color: #D4A73C; }
+.plans .plan.gold .pitch { border-left-color: #D4A73C; }
 .li-val { color: var(--blue-hi); font-weight: 700; }
 .cmp-table tr.result th, .cmp-table tr.result td { background: rgba(255,255,255,.03); vertical-align: top; padding-block: 16px; }
 .cmp-table tr.result td.feat { background: rgba(0, 130, 254, .18); }
 .res-txt { display: block; font-size: 12.6px; line-height: 1.45; font-style: italic; color: var(--ink); text-align: center; }
 .cmp-table td .val { white-space: normal; display: inline-block; max-width: 150px; line-height: 1.35; }
 .pk-res { margin: 0; font-size: 13.5px; line-height: 1.45; font-style: italic; color: var(--ink); padding: 12px 14px; border-radius: 12px; background: rgba(0,130,254,.1); border-left: 3px solid var(--blue); }
-.pk.vip .pk-res { border-left-color: #D4A73C; background: rgba(212,167,60,.08); }
+.pk.gold .pk-res { border-left-color: #D4A73C; background: rgba(212,167,60,.08); }
 .pk-res span { display: block; font-style: normal; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--blue-hi); font-weight: 700; margin-bottom: 4px; }
 .pk .cmp-rows .val { white-space: normal; text-align: right; max-width: 150px; }
 
@@ -433,8 +433,8 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
 .cmp-table tr.key-deep td.feat { background: rgba(0,130,254,.3); }
 .cmp-table tr.key-vip th, .cmp-table tr.key-vip td { background: rgba(212,167,60,.1); }
 .cmp-table tr.key-vip th { color: #E8C062; font-weight: 700; box-shadow: inset 3px 0 0 #D4A73C; }
-.cmp-table tr.key-vip td.vip { background: rgba(212,167,60,.22); }
-.cmp-table tr.key-vip td.vip .yes { background: linear-gradient(135deg, #F3D27A, #D4A73C); color: #1A1406; }
+.cmp-table tr.key-vip td.gold { background: rgba(212,167,60,.22); }
+.cmp-table tr.key-vip td.gold .yes { background: linear-gradient(135deg, #F3D27A, #D4A73C); color: #1A1406; }
 .pk .cmp-rows li.key-deep { background: rgba(0,130,254,.14); margin-inline: -16px; padding-inline: 16px; box-shadow: inset 3px 0 0 var(--blue); }
 .pk .cmp-rows li.key-deep .c-label { color: var(--blue-hi); font-weight: 700; }
 .pk .cmp-rows li.key-vip { background: rgba(212,167,60,.1); margin-inline: -16px; padding-inline: 16px; box-shadow: inset 3px 0 0 #D4A73C; }
@@ -448,16 +448,16 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
 
 
 /* VIP tab in gold */
-.tab.vip { border-color: rgba(212,167,60,.65); background: linear-gradient(180deg, rgba(212,167,60,.12), var(--surface)); }
-.tab.vip:hover { border-color: #D4A73C; }
-.tab.vip .t-name { background: linear-gradient(90deg, #F3D27A, #D4A73C); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.tab.vip .t-meta { color: #E8C062; }
-.tab.vip .gauge i.on { background: #D4A73C; box-shadow: 0 0 10px rgba(212,167,60,.6); }
-.tab.vip[aria-selected="true"] { background: linear-gradient(135deg, #F3D27A, #D4A73C 55%, #B8862A); border-color: #D4A73C; box-shadow: 0 16px 36px -14px rgba(212,167,60,.85); }
-.tab.vip[aria-selected="true"] .t-name { background: none; color: #1A1406; }
-.tab.vip[aria-selected="true"] .t-meta { color: #1A1406; }
-.tab.vip[aria-selected="true"] .gauge i { background: rgba(26,20,6,.25) !important; }
-.tab.vip[aria-selected="true"] .gauge i.on { background: #1A1406 !important; box-shadow: none; }
+.tab.gold { border-color: rgba(212,167,60,.65); background: linear-gradient(180deg, rgba(212,167,60,.12), var(--surface)); }
+.tab.gold:hover { border-color: #D4A73C; }
+.tab.gold .t-name { background: linear-gradient(90deg, #F3D27A, #D4A73C); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tab.gold .t-meta { color: #E8C062; }
+.tab.gold .gauge i.on { background: #D4A73C; box-shadow: 0 0 10px rgba(212,167,60,.6); }
+.tab.gold[aria-selected="true"] { background: linear-gradient(135deg, #F3D27A, #D4A73C 55%, #B8862A); border-color: #D4A73C; box-shadow: 0 16px 36px -14px rgba(212,167,60,.85); }
+.tab.gold[aria-selected="true"] .t-name { background: none; color: #1A1406; }
+.tab.gold[aria-selected="true"] .t-meta { color: #1A1406; }
+.tab.gold[aria-selected="true"] .gauge i { background: rgba(26,20,6,.25) !important; }
+.tab.gold[aria-selected="true"] .gauge i.on { background: #1A1406 !important; box-shadow: none; }
 
 
 /* /programma serves this same page without tariffs: the head script adds "no-tariffs" to <html> there */
@@ -475,7 +475,7 @@ h2 { overflow-wrap: break-word; hyphens: manual; }
 .plan ul.incl li.x s { text-decoration-thickness: 1px; text-decoration-color: rgba(157, 176, 204, .5); }
 .plan ul.incl li.b { font-weight: 700; color: #fff; }
 .plan ul.incl li.b::before { box-shadow: 0 0 10px rgba(0,130,254,.7); }
-.plan.vip ul.incl li.on::before { background: linear-gradient(135deg, #F3D27A, #D4A73C); color: #1A1406; }
+.plan.gold ul.incl li.on::before { background: linear-gradient(135deg, #F3D27A, #D4A73C); color: #1A1406; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* deposit ticket */
@@ -646,6 +646,40 @@ nav.menu a:hover::after { transform: scaleX(1); }
   .pre { opacity: 1; transform: none; }
   .hero .when { color: var(--blue); background: none; }
 }
+
+/* «Глубина» marked in gold (VIP is plain) */
+.gold { --g1: #F3D27A; --g2: #D4A73C; --g3: #B8862A; }
+.plan.feat.gold { box-shadow: 0 30px 70px -30px rgba(212,167,60,.6); }
+.plan.feat.gold::before { background: conic-gradient(from var(--ang, 0deg), #D4A73C, #FFE7A3, #D4A73C, #8A6118, #D4A73C); }
+.plan.feat.gold::after { background: radial-gradient(420px circle at var(--mx) var(--my), rgba(212,167,60,.16), transparent 45%), linear-gradient(180deg, #2A2614 0%, var(--surface) 65%); }
+.plan.feat.gold .badge, .cmp-table th.gold .badge, .pk.gold .badge { background: linear-gradient(90deg, #D4A73C, #F3D27A); color: #1A1406; box-shadow: 0 8px 20px -6px rgba(212,167,60,.9); }
+.plan.feat.gold .price .now { color: #F3D27A; text-shadow: 0 0 30px rgba(212,167,60,.55); }
+.plan.feat.gold .gauge i:nth-child(-n+3) { background: #D4A73C; box-shadow: 0 0 10px rgba(212,167,60,.6); }
+.plan.gold ul.incl li.b::before { box-shadow: 0 0 10px rgba(212,167,60,.7); }
+.plan.gold ul.incl li.b { color: #F6DE9A; }
+.btn.gold.pulse { animation: pulseGold 2.4s ease-out infinite; }
+@keyframes pulseGold { 0% { box-shadow: 0 0 0 0 rgba(212,167,60,.6); } 70% { box-shadow: 0 0 0 16px rgba(212,167,60,0); } 100% { box-shadow: 0 0 0 0 rgba(212,167,60,0); } }
+.cmp-table .feat.gold { background: rgba(212,167,60,.1); box-shadow: inset 2px 0 0 #D4A73C, inset -2px 0 0 #D4A73C; }
+.cmp-table thead th.feat.gold { background: linear-gradient(180deg, #3A3218, rgba(212,167,60,.1)); box-shadow: inset 2px 0 0 #D4A73C, inset -2px 0 0 #D4A73C, inset 0 2px 0 #D4A73C; }
+.cmp-table tfoot td.feat.gold { box-shadow: inset 2px 0 0 #D4A73C, inset -2px 0 0 #D4A73C, inset 0 -2px 0 #D4A73C; }
+.cmp-table td.gold .yes { background: linear-gradient(135deg, #F3D27A, #D4A73C); color: #1A1406; }
+.cmp-table td.gold .val { color: #F3D27A; }
+.early td.feat.gold .ep { color: #F3D27A; text-shadow: 0 0 24px rgba(212,167,60,.55); }
+.cmp-table tr.key-deep th, .cmp-table tr.key-deep td { background: rgba(212,167,60,.1); }
+.cmp-table tr.key-deep th { color: #F3D27A; box-shadow: inset 3px 0 0 #D4A73C; }
+.cmp-table tr.key-deep td.feat.gold { background: rgba(212,167,60,.24); }
+.pk.feat.gold { border-color: #D4A73C; background: linear-gradient(180deg, #2A2614 0%, var(--surface) 60%); }
+.pk.gold .pk-new { color: #F3D27A; }
+.pk.gold.open .chev { background: #D4A73C; }
+.pk.gold .cmp-rows .yes { background: linear-gradient(135deg, #F3D27A, #D4A73C); color: #1A1406; }
+.pk.gold .cmp-rows .val { color: #F3D27A; }
+.pk.gold .pk-res { border-left-color: #D4A73C; background: rgba(212,167,60,.08); }
+.pk.gold .pk-res span { color: #F3D27A; }
+.pk .cmp-rows li.key-deep { background: rgba(212,167,60,.1); box-shadow: inset 3px 0 0 #D4A73C; }
+.pk .cmp-rows li.key-deep .c-label { color: #F3D27A; }
+.plan li.key-deep { color: #F3D27A; }
+.cmp-table tr.result td.feat.gold { background: rgba(212,167,60,.18); }
+.plan.feat.gold .dots { background-image: radial-gradient(circle, #F3D27A 2.6px, transparent 3px); }
 </style>
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -983,7 +1017,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
           <div class="plan-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
         </article>
 
-        <article class="plan feat" data-lvl="3" style="--lvl:3">
+        <article class="plan feat gold" data-lvl="3" style="--lvl:3">
           <span class="badge">Выбор участников</span>
           <div class="plan-top"><span class="lvl">Уровень 3</span><span class="gauge" aria-label="Уровень 3 из 4"><i></i><i></i><i></i><i></i></span></div>
           <h3>Глубина</h3>
@@ -1011,10 +1045,10 @@ nav.menu a:hover::after { transform: scaleX(1); }
             <li class="on b">Доступ навсегда и VIP-чат</li>
           </ul>
           <div class="seats"><span class="seats-txt"><span aria-hidden="true">🔥</span> Осталось <b>4</b> из 10 мест</span><span class="dots-row" aria-hidden="true"><span class="dots" style="--n:4"></span><span class="dots taken" style="--n:6"></span></span></div>
-          <div class="plan-btns"><a class="btn solid pulse" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
+          <div class="plan-btns"><a class="btn gold pulse" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
         </article>
 
-        <article class="plan vip" data-lvl="4" style="--lvl:4">
+        <article class="plan" data-lvl="4" style="--lvl:4">
           <div class="plan-top"><span class="lvl">Уровень 4</span><span class="gauge" aria-label="Уровень 4 из 4"><i></i><i></i><i></i><i></i></span></div>
           <h3>VIP</h3>
           <p class="access">Доступ: Навсегда</p>
@@ -1052,33 +1086,33 @@ nav.menu a:hover::after { transform: scaleX(1); }
         </div>
         <div class="cmp-table-wrap">
           <table class="cmp-table">
-            <thead><tr><th scope="col" class="c-first">Параметр</th><th scope="col"><span class="th-name">Записи</span></th><th scope="col"><span class="th-name">Поток</span></th><th scope="col" class="feat"><span class="badge">🔥 Самый популярный</span><span class="th-name">Глубина</span></th><th scope="col" class="vip"><span class="th-name">VIP</span></th></tr></thead>
+            <thead><tr><th scope="col" class="c-first">Параметр</th><th scope="col"><span class="th-name">Записи</span></th><th scope="col"><span class="th-name">Поток</span></th><th scope="col" class="feat gold"><span class="badge">🔥 Самый популярный</span><span class="th-name">Глубина</span></th><th scope="col"><span class="th-name">VIP</span></th></tr></thead>
             <tbody>
-              <tr class="result"><th scope="row">Результат тарифа</th><td><span class="res-txt">Снимите внутренние запреты на деньги и подготовьте психику к росту — в своём темпе.</span></td><td><span class="res-txt">Пробейте финансовый потолок в сильном окружении и зафиксируйте новый уровень дохода — без откатов.</span></td><td class="feat"><span class="res-txt">Перепрошивка подсознания и снятие ограничений — для безопасного выхода на стабильные Х3–Х5 дохода.</span></td><td class="vip"><span class="res-txt">Премиальное ведение «за руку» с Татьяной Хавро — до нового финансового максимума.</span></td></tr>
-              <tr><th scope="row">8 трансформационных лекций от Татьяны</th><td><span class="val">в записи</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">8 сессий глубокой групповой терапии</th><td><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">База знаний</th><td><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Практики для проработок</th><td><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Психотехники</th><td><span class="val">базовые</span></td><td><span class="val">базовые</span></td><td class="feat"><span class="val">арсенал лучших</span></td><td class="vip"><span class="val">арсенал лучших</span></td></tr>
-              <tr><th scope="row">Поддержка в чате</th><td><span class="no" aria-label="нет">—</span></td><td><span class="val">чат поддержки</span></td><td class="feat"><span class="val">терапевт на связи каждый день</span></td><td class="vip"><span class="val">терапевт на связи каждый день</span></td></tr>
-              <tr><th scope="row">Приложение «Проработчик денег»</th><td><span class="no" aria-label="нет">—</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Глубинная проработка травм развития</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Психотерапевтические протоколы</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Ночная перепрошивка подсознания (проработка денег)</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr class="key-deep"><th scope="row">3 участия в «Метафизике бизнеса»</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Доступ навсегда и VIP-чат</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="yes" aria-label="есть">✔</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr class="key-vip"><th scope="row">Личная работа «Точка сборки» с Татьяной</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="no" aria-label="нет">—</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr class="key-vip"><th scope="row">4 глубинные индивидуальные сессии</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat"><span class="no" aria-label="нет">—</span></td><td class="vip"><span class="yes" aria-label="есть">✔</span></td></tr>
-              <tr><th scope="row">Доступ к материалам</th><td><span class="val">6 мес</span></td><td><span class="val">8 мес</span></td><td class="feat"><span class="val">12 мес</span></td><td class="vip"><span class="val">навсегда</span></td></tr>
+              <tr class="result"><th scope="row">Результат тарифа</th><td><span class="res-txt">Снимите внутренние запреты на деньги и подготовьте психику к росту — в своём темпе.</span></td><td><span class="res-txt">Пробейте финансовый потолок в сильном окружении и зафиксируйте новый уровень дохода — без откатов.</span></td><td class="feat gold"><span class="res-txt">Перепрошивка подсознания и снятие ограничений — для безопасного выхода на стабильные Х3–Х5 дохода.</span></td><td><span class="res-txt">Премиальное ведение «за руку» с Татьяной Хавро — до нового финансового максимума.</span></td></tr>
+              <tr><th scope="row">8 трансформационных лекций от Татьяны</th><td><span class="val">в записи</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat gold"><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">8 сессий глубокой групповой терапии</th><td><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat gold"><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">База знаний</th><td><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat gold"><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">Практики для проработок</th><td><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat gold"><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">Психотехники</th><td><span class="val">базовые</span></td><td><span class="val">базовые</span></td><td class="feat gold"><span class="val">арсенал лучших</span></td><td><span class="val">арсенал лучших</span></td></tr>
+              <tr><th scope="row">Поддержка в чате</th><td><span class="no" aria-label="нет">—</span></td><td><span class="val">чат поддержки</span></td><td class="feat gold"><span class="val">терапевт на связи каждый день</span></td><td><span class="val">терапевт на связи каждый день</span></td></tr>
+              <tr><th scope="row">Приложение «Проработчик денег»</th><td><span class="no" aria-label="нет">—</span></td><td><span class="yes" aria-label="есть">✔</span></td><td class="feat gold"><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">Глубинная проработка травм развития</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat gold"><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">Психотерапевтические протоколы</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat gold"><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">Ночная перепрошивка подсознания (проработка денег)</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat gold"><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr class="key-deep"><th scope="row">3 участия в «Метафизике бизнеса»</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat gold"><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">Доступ навсегда и VIP-чат</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat gold"><span class="yes" aria-label="есть">✔</span></td><td><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">Личная работа «Точка сборки» с Татьяной</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat gold"><span class="no" aria-label="нет">—</span></td><td><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">4 глубинные индивидуальные сессии</th><td><span class="no" aria-label="нет">—</span></td><td><span class="no" aria-label="нет">—</span></td><td class="feat gold"><span class="no" aria-label="нет">—</span></td><td><span class="yes" aria-label="есть">✔</span></td></tr>
+              <tr><th scope="row">Доступ к материалам</th><td><span class="val">6 мес</span></td><td><span class="val">8 мес</span></td><td class="feat gold"><span class="val">12 мес</span></td><td><span class="val">навсегда</span></td></tr>
             </tbody>
             <tbody class="money">
-              <tr class="early"><th scope="row">Ранняя цена</th><td><span class="ep">€490</span></td><td><span class="ep">€790</span></td><td class="feat"><span class="ep">€990</span></td><td class="vip"><span class="ep">€2 000</span></td></tr>
-              <tr><th scope="row">Рассрочка на 6 месяцев</th><td><span class="inst-v">€82/мес</span></td><td><span class="inst-v">€132/мес</span></td><td class="feat"><span class="inst-v">€165/мес</span></td><td class="vip"><span class="inst-v">€333/мес</span></td></tr>
-              <tr><th scope="row">Рассрочка на 12 месяцев</th><td><span class="inst-v">≈€41/мес</span></td><td><span class="inst-v">≈€66/мес</span></td><td class="feat"><span class="inst-v">≈€83/мес</span></td><td class="vip"><span class="inst-v">≈€167/мес</span></td></tr>
-              <tr><th scope="row">В пересчёте на день (12 мес)</th><td><span class="inst-v">≈€1,3</span></td><td><span class="inst-v">≈€2,2</span></td><td class="feat"><span class="inst-v">≈€2,7</span></td><td class="vip"><span class="inst-v">≈€5,5</span></td></tr>
-              <tr><th scope="row">Места</th><td><span class="left"><span aria-hidden="true">🔥</span> Осталось <b>11</b> из 30 мест</span></td><td><span class="left"><span aria-hidden="true">🔥</span> Осталось <b>7</b> из 20 мест</span></td><td class="feat"><span class="left"><span aria-hidden="true">🔥</span> Осталось <b>4</b> из 10 мест</span></td><td class="vip"><span class="left"><span aria-hidden="true">🔥</span> Осталось <b>2</b> из 3 мест</span></td></tr>
+              <tr class="early"><th scope="row">Ранняя цена</th><td><span class="ep">€490</span></td><td><span class="ep">€790</span></td><td class="feat gold"><span class="ep">€990</span></td><td><span class="ep">€2 000</span></td></tr>
+              <tr><th scope="row">Рассрочка на 6 месяцев</th><td><span class="inst-v">€82/мес</span></td><td><span class="inst-v">€132/мес</span></td><td class="feat gold"><span class="inst-v">€165/мес</span></td><td><span class="inst-v">€333/мес</span></td></tr>
+              <tr><th scope="row">Рассрочка на 12 месяцев</th><td><span class="inst-v">≈€41/мес</span></td><td><span class="inst-v">≈€66/мес</span></td><td class="feat gold"><span class="inst-v">≈€83/мес</span></td><td><span class="inst-v">≈€167/мес</span></td></tr>
+              <tr><th scope="row">В пересчёте на день (12 мес)</th><td><span class="inst-v">≈€1,3</span></td><td><span class="inst-v">≈€2,2</span></td><td class="feat gold"><span class="inst-v">≈€2,7</span></td><td><span class="inst-v">≈€5,5</span></td></tr>
+              <tr><th scope="row">Места</th><td><span class="left"><span aria-hidden="true">🔥</span> Осталось <b>11</b> из 30 мест</span></td><td><span class="left"><span aria-hidden="true">🔥</span> Осталось <b>7</b> из 20 мест</span></td><td class="feat gold"><span class="left"><span aria-hidden="true">🔥</span> Осталось <b>4</b> из 10 мест</span></td><td><span class="left"><span aria-hidden="true">🔥</span> Осталось <b>2</b> из 3 мест</span></td></tr>
             </tbody>
-            <tfoot><tr><th scope="row"></th><td><div class="cmp-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div></td><td><div class="cmp-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div></td><td class="feat"><div class="cmp-btns"><a class="btn solid" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div></td><td class="vip"><div class="cmp-btns"><a class="btn gold" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div></td></tr></tfoot>
+            <tfoot><tr><th scope="row"></th><td><div class="cmp-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div></td><td><div class="cmp-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div></td><td class="feat gold"><div class="cmp-btns"><a class="btn gold" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div></td><td><div class="cmp-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div></td></tr></tfoot>
           </table>
         </div>
         <div class="pk-list">
@@ -1104,8 +1138,8 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <li class="off"><span class="c-label">Ночная перепрошивка подсознания (проработка денег)</span><span class="no" aria-label="нет">—</span></li>
               <li class="off key-deep"><span class="c-label">3 участия в «Метафизике бизнеса»</span><span class="no" aria-label="нет">—</span></li>
               <li class="off"><span class="c-label">Доступ навсегда и VIP-чат</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off key-vip"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off key-vip"><span class="c-label">4 глубинные индивидуальные сессии</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off"><span class="c-label">4 глубинные индивидуальные сессии</span><span class="no" aria-label="нет">—</span></li>
               <li class="on"><span class="c-label">Доступ к материалам</span><span class="val">6 мес</span></li>
               </ul>
               <p class="left"><span aria-hidden="true">🔥</span> Осталось <b>11</b> из 30 мест</p>
@@ -1134,15 +1168,15 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <li class="off"><span class="c-label">Ночная перепрошивка подсознания (проработка денег)</span><span class="no" aria-label="нет">—</span></li>
               <li class="off key-deep"><span class="c-label">3 участия в «Метафизике бизнеса»</span><span class="no" aria-label="нет">—</span></li>
               <li class="off"><span class="c-label">Доступ навсегда и VIP-чат</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off key-vip"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off key-vip"><span class="c-label">4 глубинные индивидуальные сессии</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off"><span class="c-label">4 глубинные индивидуальные сессии</span><span class="no" aria-label="нет">—</span></li>
               <li class="on"><span class="c-label">Доступ к материалам</span><span class="val">8 мес</span></li>
               </ul>
               <p class="left"><span aria-hidden="true">🔥</span> Осталось <b>7</b> из 20 мест</p>
               <div class="cmp-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
             </div></div>
           </div>
-          <div class="pk feat open">
+          <div class="pk feat gold open">
             <span class="badge">🔥 Самый популярный</span>
             <button type="button" class="pk-h" id="pk-btn-2" aria-expanded="true" aria-controls="pk-body-2">
               <span class="pk-name">Глубина</span>
@@ -1164,15 +1198,15 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <li class="on"><span class="c-label">Ночная перепрошивка подсознания (проработка денег)</span><span class="yes" aria-label="есть">✔</span></li>
               <li class="on key-deep"><span class="c-label">3 участия в «Метафизике бизнеса»</span><span class="yes" aria-label="есть">✔</span></li>
               <li class="on"><span class="c-label">Доступ навсегда и VIP-чат</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="off key-vip"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="no" aria-label="нет">—</span></li>
-              <li class="off key-vip"><span class="c-label">4 глубинные индивидуальные сессии</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="no" aria-label="нет">—</span></li>
+              <li class="off"><span class="c-label">4 глубинные индивидуальные сессии</span><span class="no" aria-label="нет">—</span></li>
               <li class="on"><span class="c-label">Доступ к материалам</span><span class="val">12 мес</span></li>
               </ul>
               <p class="left"><span aria-hidden="true">🔥</span> Осталось <b>4</b> из 10 мест</p>
-              <div class="cmp-btns"><a class="btn solid" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
+              <div class="cmp-btns"><a class="btn gold" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
             </div></div>
           </div>
-          <div class="pk vip">
+          <div class="pk">
             
             <button type="button" class="pk-h" id="pk-btn-3" aria-expanded="false" aria-controls="pk-body-3">
               <span class="pk-name">VIP</span>
@@ -1194,12 +1228,12 @@ nav.menu a:hover::after { transform: scaleX(1); }
               <li class="on"><span class="c-label">Ночная перепрошивка подсознания (проработка денег)</span><span class="yes" aria-label="есть">✔</span></li>
               <li class="on key-deep"><span class="c-label">3 участия в «Метафизике бизнеса»</span><span class="yes" aria-label="есть">✔</span></li>
               <li class="on"><span class="c-label">Доступ навсегда и VIP-чат</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on key-vip"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="yes" aria-label="есть">✔</span></li>
-              <li class="on key-vip"><span class="c-label">4 глубинные индивидуальные сессии</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">Личная работа «Точка сборки» с Татьяной</span><span class="yes" aria-label="есть">✔</span></li>
+              <li class="on"><span class="c-label">4 глубинные индивидуальные сессии</span><span class="yes" aria-label="есть">✔</span></li>
               <li class="on"><span class="c-label">Доступ к материалам</span><span class="val">навсегда</span></li>
               </ul>
               <p class="left"><span aria-hidden="true">🔥</span> Осталось <b>2</b> из 3 мест</p>
-              <div class="cmp-btns"><a class="btn gold" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
+              <div class="cmp-btns"><a class="btn ghost" href="https://secure.wayforpay.com/button/b5c2c8065e234" target="_blank" rel="noopener" data-book>Забронировать</a><a class="btn link" href="https://t.me/tetiana_khavro27" target="_blank" rel="noopener" data-ask>Задать вопрос</a></div>
             </div></div>
           </div>
         </div>
@@ -1282,7 +1316,7 @@ nav.menu a:hover::after { transform: scaleX(1); }
       var lvl = i + 1, name = p.querySelector('h3').textContent, now = p.querySelector('.price .now');
       function seatsLabel(pl) { var b = pl.querySelector('.seats-txt b'); if (!b) return ''; var n = parseInt(b.textContent, 10), m10 = n % 10, m100 = n % 100; var w = (m10 === 1 && m100 !== 11) ? 'место' : (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) ? 'места' : 'мест'; return n + '&nbsp;' + w; }
       var b = document.createElement('button');
-      b.type = 'button'; b.className = 'tab' + (p.classList.contains('vip') ? ' vip' : ''); b.id = 'tab-' + i; b.setAttribute('role', 'tab'); b.setAttribute('aria-controls', p.id);
+      b.type = 'button'; b.className = 'tab' + (p.classList.contains('gold') ? ' gold' : ''); b.id = 'tab-' + i; b.setAttribute('role', 'tab'); b.setAttribute('aria-controls', p.id);
       p.setAttribute('aria-labelledby', b.id);
       var g = '<span class="gauge" aria-hidden="true">' + [1, 2, 3, 4].map(function (k) { return '<i class="' + (k <= lvl ? 'on' : '') + '"></i>'; }).join('') + '</span>';
       b.innerHTML = '<span class="t-top">' + g + (p.classList.contains('feat') ? '<span class="t-hit">Хит</span>' : '') + '</span><span class="t-name">' + name + '</span><span class="t-meta"><span class="t-price" data-early="' + now.dataset.early + '" data-full="' + now.dataset.full + '">' + now.textContent + '</span> · ' + seatsLabel(p) + '</span>';
